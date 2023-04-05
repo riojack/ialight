@@ -4,7 +4,7 @@ body {
 
 .app-container {
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -12,16 +12,55 @@ body {
 {
     width: 33%;
     height: 50vh;
-flex-grow: 1;
+    flex-grow: 1;
+    position: relative;
 }
-.app-container > div:nth-child(1),
- .app-container > div:nth-child(2) {
+.app-container > div > img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+}
+
+.app-container > div > span {
+    position: relative;
+    bottom: calc(18% - 30px);
+    width: 100%;
+    color: white;
+    display: none;
+}
+.app-container > div:hover > span {
+    display: block;
+}
+
+.app-container > div:nth-child(5n+1),
+ .app-container > div:nth-child(5n+2) {
+    width: 50%;
     height: 50vh;
 }
 
-.app-container > div:nth-child(1) > img,
- .app-container > div:nth-child(2) > img {
+.app-container > div:nth-child(5n+1) > img,
+ .app-container > div:nth-child(5n+2) > img {
      height: 100%;
      width: 100%;
+     object-fit: cover;
+     object-position: center;
  }
+ 
+.app-logo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    animation-delay: 5s;
+    animation-duration: 2s;
+    animation-name: fadein;
+    animation-fill-mode: forwards;
+
+}
+@keyframes fadein {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 30%;
+    }
+}
