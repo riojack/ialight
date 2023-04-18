@@ -17,4 +17,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.GH_AWS_A_SECRET }}
           aws-region: us-east-1
       - name: Deploy
-        run: aws s3 sync ./ s3://test.iowalight.com
+        run: aws s3 sync ./app s3://test.iowalight.com
