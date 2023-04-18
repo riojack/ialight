@@ -10,48 +10,30 @@
     <link rel="stylesheet" href="_variables.css">
     <link rel="stylesheet" href="_index.css">
     <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
+    <script src="js/data.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            for(let i = 0; i < photos.length; i++) {
+                const photo = photos[i];
+                const container = document.createElement("div");
+                const image = document.createElement("img");
+                const span = document.createElement("span");
+
+                image.setAttribute("src", photo.src);
+                image.setAttribute("decoding", "async")
+                image.setAttribute("loading", "lazy")
+                span.textContent = photo.title;
+                container.appendChild(image);
+                container.appendChild(span);
+                document.querySelector(".app-container").appendChild(container);
+            }
+        });
+    </script>
 </head>
 
 <body>
     <div class="app-container">
-        <div>
-            <img src="images/image-001.jpg">
-            <span>Mushrooms in leaves</span>
-        </div>
-        <div>
-            <img src="images/image-002.jpg" alt="">
-            <span>Mushrooms in leaves</span>
-        </div>
-        <div>
-            <img src="images/image-003.jpg" alt="">
-            <span>Mushrooms in leaves</span>
-        </div>
-        <div>
-            <img src="images/image-004.jpg" alt="">
-            <span>Mushrooms in leaves</span>
-        </div>
-        <div>
-            <img src="images/image-005.jpg" alt="">
-            <span>Mushrooms in leaves</span>
-        </div>
-        <div>
-            <img src="images/image-001.jpg">
-        </div>
-        <div>
-            <img src="images/image-002.jpg" alt="">
-        </div>
-        <div>
-            <img src="images/image-003.jpg" alt="">
-        </div>
-        <div>
-            <img src="images/image-004.jpg" alt="">
-        </div>
-        <div>
-            <img src="images/image-005.jpg" alt="">
-
-        </div>
         
-
     </div>
     <div class="app-logo">
         <img src="images/ialight-logo.svg" width="160" />
