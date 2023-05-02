@@ -22,12 +22,14 @@ body {
 }
 
 .app-container > div > span {
-    position: relative;
-    bottom: calc(18% - 30px);
+    position: absolute;
+    bottom: 25px;
+    left: 0;
     width: 100%;
     padding: 0 0.45vw;
     color: white;
     opacity: 0;
+    white-space: pre;
     
 }
 .app-container > div:hover > span {
