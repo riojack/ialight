@@ -11,9 +11,20 @@
     <link rel="stylesheet" href="_index.css">
     <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
     <script src="js/data.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <div id="sidebar">
+            <img src="images/hamburger.svg" alt="">
+        </div>
+    </div>
+    <div class="app-logo">
+        <img src="images/ialight-logo.svg" width="160" />
+    </div>
     <script>
         window.addEventListener('load', function () {
-            for (let i = 0; i < photos.length; i++) {
+            for (let i = photos.length - 1; i >= 0; i--) {
                 const photo = photos[i];
                 const container = document.createElement("div");
                 const image = document.createElement("img");
@@ -22,23 +33,15 @@
                 image.setAttribute("src", photo.src);
                 image.setAttribute("decoding", "async")
                 image.setAttribute("loading", "lazy")
-                const lens = photo.lens === "-" ? "No Lens Information":photo.lens;
+                container.setAttribute("class", "thumbnail")
+                const lens = photo.lens === "-" ? "No Lens Information" : photo.lens;
                 metaspan.innerHTML = `<strong>${photo.title}</strong> ${photo.datetime}\n${photo.camera}\n(${lens})`;
                 container.appendChild(image);
                 container.appendChild(metaspan);
-                document.querySelector(".app-container").appendChild(container);
+                document.querySelector(".app-container").insertAdjacentElement("afterbegin", container);
             }
         });
     </script>
-</head>
-
-<body>
-    <div class="app-container">
-
-    </div>
-    <div class="app-logo">
-        <img src="images/ialight-logo.svg" width="160" />
-    </div>
 </body>
 
 </html>
