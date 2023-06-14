@@ -1,0 +1,25 @@
+.tag-grid {
+    display: grid;
+    grid-auto-rows: 40vh;
+    grid-template-columns: 32vw 32vw 32vw;
+    margin: 0 auto;
+    width: 95vw
+}
+
+.tag-grid img {
+    width: 100%;
+}
+
+.tag-grid a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.tag-grid a h1 {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: block;
+    line-height: 10.5;
+    font-size: 3.5vh;
+}

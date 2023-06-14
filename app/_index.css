@@ -80,6 +80,7 @@ body {
     width: 3vw;
     text-align: center;
     height: 100vh;
+    overflow-y: hidden;
 
     transition: width 0.2s ease-out,
                 background-color 0.2s ease-out;
@@ -106,6 +107,16 @@ body {
 }
 #sidebar:hover .sidebar-app-logo {
     opacity: 75%;
+}
+#sidebar .menu {
+    opacity: 0;
+}
+#sidebar .menu ul {
+    margin: 0;
+    padding: 0;
+}
+#sidebar:hover .menu {
+    opacity: 1;
 }
 .popover {
     position: absolute;
