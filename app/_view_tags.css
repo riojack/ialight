@@ -1,0 +1,11 @@
+.tag-image-grid {
+    display: grid;
+    grid-auto-rows: 40vh;
+    grid-template-columns: 32vw 32vw 32vw;
+    margin: 0 auto;
+    width: 95vw
+}
+
+.tag-image-grid img {
+    width: 100%;
+}

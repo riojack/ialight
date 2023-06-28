@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="vendor/bootstrap-reboot.css">
     <link rel="stylesheet" href="_variables.css">
     <link rel="stylesheet" href="_index.css">
-    <link rel="stylesheet" href="_tags.css">
+    <link rel="stylesheet" href="_view_tags.css">
     <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
     <script src="js/data.js"></script>
     <script src="js/events.js"></script>
@@ -33,35 +33,33 @@
     <div class="app-logo">
         <img src="images/ialight-logo.svg" width="160" />
     </div>
-    <div class="tag-grid"></div>
+    <div class="tag-image-grid"></div>
     <div class="popover"></div>
     <script>
-        function extractTags(Photo, tagMap) {
-            for (let tag of Photo.tags){
-                if (tag.startsWith("camera:")) {
-                    continue
-                } 
-                tag = tag.replace("t:", "")
-                tagMap.set(tag, Photo.src)
-            }
-        }
         window.addEventListener('load', function () {
             const sidebar = document.querySelector("#sidebar");
             attachHandlers(sidebar);
-            const uniqueTags = new Map();
-            for (let x of photos){
-                extractTags(x, uniqueTags)
+            const params = new URLSearchParams(window.location.search);
+            // document.querySelector(".tag-image-grid").innerHTML = params.get("tag");
+            const tagToSearchFor = "t:" + params.get("tag");
+            const photosWithTag = [];
+            
+            // Find Photos with tagToSearchFor
+            for (const photo of photos){
+                const photoTags = photo.tags;
+                if (photoTags.indexOf(tagToSearchFor)>= 0) {
+                    photosWithTag.push(photo);
+                }
             }
-            for (const [tag, src] of uniqueTags){
-                const container = document.createElement("div");
-                const anchor = document.createElement("a");
-                container.setAttribute("class", "tag-thumbnail")
-                anchor.setAttribute("style", `background:center center url("${src}")`);
-                anchor.setAttribute("href", "view_tag.html?tag="+encodeURIComponent(tag))
 
-                anchor.innerHTML = `<h1>${tag}</h1>`;
-                container.appendChild(anchor);
-                document.querySelector(".tag-grid").insertAdjacentElement("afterbegin", container);
+            const grid = document.querySelector(".tag-image-grid");
+            // Show the matching photos on screen
+            for (const photo of photosWithTag) {
+                const container = document.createElement("div");
+                const img = document.createElement("img");
+                img.setAttribute("src", photo.src);
+                container.appendChild(img);
+                grid.appendChild(container)
             }
         });
     </script>
