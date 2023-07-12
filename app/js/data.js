@@ -24,10 +24,10 @@ const photos = [
         title: "On I-35 Northbound", src: "images/image-008.jpg", camera: "Canon EOS 80D", lens: "-", datetime: "April 5th, 1984", tags: ["camera:Canon EOS80D", "t:on the road"],
     },
     {
-        title: "Butterfly on a flower", src: "images/image-009.jpg", camera: "Canon EOS 80D", lens: "-", datetime: "April 5th, 1984", tags: ["camera:Canon EOS80D", "t:bug"],
+        title: "Butterfly on a flower", src: "images/image-009.jpg", camera: "Canon EOS 80D", lens: "-", datetime: "April 5th, 1984", tags: ["camera:Canon EOS80D", "t:bugs"],
     },
     {
-        title: "Peering over the edge", src: "images/image-010.jpg", camera: "Canon EOS 80D", lens: "-", datetime: "April 5th, 1984", tags: ["camera:Canon EOS80D", "t:bug"],
+        title: "Peering over the edge", src: "images/image-010.jpg", camera: "Canon EOS 80D", lens: "-", datetime: "April 5th, 1984", tags: ["camera:Canon EOS80D", "t:bugs"],
     },
     {
         title: "Burst of Sunset", src: "images/image-011.jpg", camera: "Canon EOS 80D", lens: "-", datetime: "April 5th, 1984", tags: ["camera:Canon EOS80D", "t:nature"],
