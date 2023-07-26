@@ -1,10 +1,6 @@
 body {
     background-color: var(--theme-primary-3);
 }
-/* :where(#sidebar:hover) .app-logo{
-    bottom: 10px;
-    right: 100px;
-} */
 .modal-content {
     backdrop-filter: blur(10px);
     background-color: transparent;
@@ -29,9 +25,9 @@ body {
     background-color: var(--theme-primary-3);
 }
 @media (orientation: portrait) {
-#orientation-warning {
-    display: block;
-}
+    #orientation-warning {
+        display: block;
+    }
 }
 .app-container > div.thumbnail
 {
@@ -58,8 +54,6 @@ body {
     padding: 0 0.45vw;
     color: white;
     opacity: 0;
-    white-space: pre;
-    
 }
 .app-container > div.thumbnail:hover span {
     animation-delay: 0s;
@@ -101,7 +95,7 @@ body {
     width: 3vw;
     text-align: center;
     height: 100vh;
-    overflow-y: hidden;
+    overflow: hidden;
 
     transition: width 0.2s ease-out,
                 background-color 0.2s ease-out;
@@ -110,6 +104,26 @@ body {
     width: 12vw;
     background-color: var(--theme-backdrop);
 }
+@media (orientation: landscape) and (max-height: 575.98px) {
+    #sidebar  {
+        width: 6vw;
+    }
+    #sidebar:hover  {
+        width: 80vw;
+    }
+}
+@media (orientation: portrait) {
+    #sidebar  {
+        width: 12vw;
+    }
+    #sidebar:hover  {
+        width: 100vw;
+    }
+    #sidebar img.hamburger {
+        max-width: 64px;
+    }
+}
+
 #sidebar img.hamburger {
     width: 45%;
     max-width: 16px;
@@ -120,6 +134,14 @@ body {
 
 #sidebar:hover img.hamburger {
     opacity: 0;
+}
+#sidebar .sidebar-exit {
+    display: none;
+    color: white;
+    text-align: right;
+}
+#sidebar:hover .sidebar-exit {
+    display: block;
 }
 .sidebar-app-logo {
     width: 85%;
