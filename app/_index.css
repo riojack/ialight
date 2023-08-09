@@ -100,7 +100,7 @@ body {
     transition: width 0.2s ease-out,
                 background-color 0.2s ease-out;
 }
-#sidebar:hover {
+.sideBar-open #sidebar {
     width: 12vw;
     background-color: var(--theme-backdrop);
 }
@@ -108,7 +108,7 @@ body {
     #sidebar  {
         width: 6vw;
     }
-    #sidebar:hover  {
+    .sideBar-open #sidebar  {
         width: 80vw;
     }
 }
@@ -116,11 +116,15 @@ body {
     #sidebar  {
         width: 12vw;
     }
-    #sidebar:hover  {
+    .sideBar-open #sidebar  {
         width: 100vw;
     }
     #sidebar img.hamburger {
         max-width: 64px;
+    }
+    #sidebar .sidebar-exit span{
+        right: 20px;
+        top: 0;
     }
 }
 
@@ -132,23 +136,39 @@ body {
     transition: opacity 0.2s ease-out;
 }
 
-#sidebar:hover img.hamburger {
+.sideBar-open #sidebar img.hamburger {
     opacity: 0;
 }
 #sidebar .sidebar-exit {
     display: none;
     color: white;
-    text-align: right;
+    position: relative;
 }
-#sidebar:hover .sidebar-exit {
+#sidebar .sidebar-exit span {
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+#sidebar .sidebar-exit span a {
+    text-decoration-line: none;
+    color: black;
+    background-color: var(--theme-primary-2);
     display: block;
+    height: 21px;
+    width: 21px;
+    border-radius: 12.5px;
+    font-size: .85rem;
+}
+.sideBar-open #sidebar .sidebar-exit {
+    display: block;
+
 }
 .sidebar-app-logo {
     width: 85%;
     margin: 0 auto;
     opacity: 0;
 }
-#sidebar:hover .sidebar-app-logo {
+.sideBar-open #sidebar .sidebar-app-logo {
     opacity: 75%;
 }
 #sidebar .menu {
@@ -157,8 +177,26 @@ body {
 #sidebar .menu ul {
     margin: 0;
     padding: 0;
+} 
+#sidebar .menu ul li {
+    display: block;
 }
-#sidebar:hover .menu {
+#sidebar .menu ul li a {
+    padding: 5%;
+    display: block;
+    text-decoration-line: none;
+    color: var(--theme-primary-2);
+    font-size: 1.5rem;
+}
+#sidebar .menu ul li a:hover {
+    text-decoration-line: underline;
+}
+@media (orientation: portrait) {
+    #sidebar .menu ul li a {
+        font-size: 2.5rem;
+    }
+}
+.sideBar-open #sidebar .menu {
     opacity: 1;
 }
 .popover {

@@ -1,6 +1,9 @@
 function attachHandlers(/** @type {HTMLElement} */sideBarDOM) {
-    sideBarDOM.addEventListener("mouseenter", _sideBarMouseEnter)
-    sideBarDOM.addEventListener("mouseleave", _sideBarMouseLeave)
+    const hamburger = sideBarDOM.querySelector("img");
+    hamburger.addEventListener("touchend", _sideBarMouseEnter)
+    const anchor = sideBarDOM.querySelector("a");
+    anchor.addEventListener("click", _sidebarClose)
+    anchor.addEventListener("touchend", _sidebarClose)
 };
 function _sideBarMouseEnter() {
     document.body.className = "sideBar-open"
@@ -8,3 +11,9 @@ function _sideBarMouseEnter() {
 function _sideBarMouseLeave() {
     document.body.className = ""
 };
+function _sidebarClose(/** @type {MouseEvent} */e) {
+
+document.body.className = ""
+
+    e.preventDefault();
+}
