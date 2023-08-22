@@ -1,19 +1,21 @@
 function attachHandlers(/** @type {HTMLElement} */sideBarDOM) {
-    const hamburger = sideBarDOM.querySelector("img");
-    hamburger.addEventListener("touchend", _sideBarMouseEnter)
-    const anchor = sideBarDOM.querySelector("a");
-    anchor.addEventListener("click", _sidebarClose)
-    anchor.addEventListener("touchend", _sidebarClose)
+    const hamburger_anchor = sideBarDOM.querySelector("a.sidebar-opener");
+    const sidebar_closer_anchor = sideBarDOM.querySelector("a.sidebar-closer");
+    hamburger_anchor.addEventListener("touchend", _sideBarMouseEnter)
+    hamburger_anchor.addEventListener("click", _sideBarMouseEnter)
+    sidebar_closer_anchor.addEventListener("click", _sidebarClose)
+    sidebar_closer_anchor.addEventListener("touchend", _sidebarClose)
 };
-function _sideBarMouseEnter() {
+function _sideBarMouseEnter(/** @type {MouseEvent} */e) {
     document.body.className = "sideBar-open"
+    e.preventDefault();
 };
 function _sideBarMouseLeave() {
     document.body.className = ""
 };
 function _sidebarClose(/** @type {MouseEvent} */e) {
 
-document.body.className = ""
+    document.body.className = "";
 
     e.preventDefault();
 }
