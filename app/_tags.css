@@ -1,13 +1,19 @@
+body {
+    overflow-x: hidden;
+}
 .tag-grid {
     display: grid;
     grid-auto-rows: 40vh;
-    grid-template-columns: 32vw 32vw 32vw;
+    grid-template-columns: 33.3vw 33.3vw auto;
     margin: 0 auto;
-    width: 95vw
+    width: 100vw;
+    
 }
 
 .tag-grid img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .tag-grid a {
