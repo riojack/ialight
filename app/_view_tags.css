@@ -7,6 +7,12 @@ body {
     margin: 0 auto;
     width: 100vw
 }
+@media (orientation: portrait) {
+    .tag-image-grid {
+        grid-auto-rows: 30vh;
+        grid-template-columns: 50vw 50vw;
+    }
+}
 
 .tag-image-grid img {
     width: 100%;
