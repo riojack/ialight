@@ -199,6 +199,20 @@ body {
 .sideBar-open #sidebar .menu {
     opacity: 1;
 }
+@media (orientation: landscape) and (max-height: 575.98px)  {
+    .sideBar-open #sidebar {
+        width: 100vw;
+    }
+    .sidebar-app-logo {
+        width: 50%;
+        float: left;
+        opacity: 0;
+    }
+    .menu {
+        width: 50%;
+        float: left;
+    }
+}
 .popover {
     position: absolute;
     top: 25px;
