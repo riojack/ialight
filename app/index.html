@@ -1,73 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Iowa Light</title>
-  <link rel="stylesheet" href="vendor/bootstrap-reboot.css">
-  <link rel="stylesheet" href="_variables.css">
-  <link rel="stylesheet" href="_index.css">
-  <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
-  <script src="js/data.js"></script>
-  <script src="js/events.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iowa Light</title>
+    <link rel="stylesheet" href="vendor/bootstrap-reboot.css">
+    <link rel="stylesheet" href="_variables.css">
+    <link rel="stylesheet" href="_index.css">
+    <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
+    <script src="js/data.js"></script>
+    <script src="js/events.js"></script>
+  </head>
 
-<body>
-  <div class="app-container">
-    <div id="orientation-warning">
-      Website is best experienced in landscape mode.
-    </div>
-    <div id="sidebar">
-      <a href="about:blank" class="sidebar-opener"><img src="images/hamburger.svg" class="hamburger"></a>
-      <div class="sidebar-exit">
-        <span><a href="about:blank" class="sidebar-closer">X</a></span>
+  <body>
+    <div class="app-container">
+      <div id="orientation-warning">
+        Website is best experienced in landscape mode.
       </div>
-      <div class="sidebar-app-logo">
-        <img src="images/ialight-logo.svg" />
+      <div id="sidebar">
+        <a href="about:blank" class="sidebar-opener"><img src="images/hamburger.svg" class="hamburger"></a>
+        <div class="sidebar-exit">
+          <span><a href="about:blank" class="sidebar-closer">X</a></span>
+        </div>
+        <div class="sidebar-app-logo">
+          <img src="images/ialight-logo.svg" />
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tags.html">Tags</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="tags.html">Tags</a></li>
-        </ul>
-      </nav>
     </div>
-  </div>
-  <div class="app-logo">
-    <img src="images/ialight-logo.svg" width="160" />
-  </div>
-  <div class="popover"></div>
-  <script>
-    window.addEventListener("load", function () {
-      const sidebar = document.querySelector("#sidebar");
-      attachHandlers(sidebar)
-      for (let i = photos.length - 1; i >= 0; i--) {
-        const photo = photos[i];
-        const container = document.createElement("div");
-        const anchor = document.createElement("a");
-        const image = document.createElement("img");
-        const metaspan = document.createElement("span");
-        anchor.setAttribute("href", photo.src);
-        anchor.setAttribute("target", "_blank");
-        anchor.setAttribute("rel", "noopener noreferrer")
-        image.setAttribute("src", photo.src);
-        image.setAttribute("decoding", "async")
-        image.setAttribute("loading", "lazy")
-        container.setAttribute("class", "thumbnail")
-        const lens = photo.lens === "-" ? "No Lens Information" : photo.lens;
-        metaspan.innerHTML = "";
-        metaspan.innerHTML += `<div><strong>${photo.title}</strong></div>`;
-        metaspan.innerHTML += `<div>${photo.datetime}</div>`;
-        metaspan.innerHTML += `<div>${photo.camera}\n(${lens})</div>`;
-        anchor.appendChild(image);
-        anchor.appendChild(metaspan);
-        container.appendChild(anchor);
-        document.querySelector(".app-container").insertAdjacentElement("afterbegin", container);
-      }
-    });
-  </script>
-</body>
+    <div class="app-logo">
+      <img src="images/ialight-logo.svg" width="160" />
+    </div>
+    <div class="popover"></div>
+    <script>
+      window.addEventListener("load", function () {
+        const sidebar = document.querySelector("#sidebar");
+        attachHandlers(sidebar);
+        for (let i = photos.length - 1; i >= 0; i--) {
+          const photo = photos[i];
+          const container = document.createElement("div");
+          const anchor = document.createElement("a");
+          const image = document.createElement("img");
+          const metaspan = document.createElement("span");
+          anchor.setAttribute("href", photo.src);
+          anchor.setAttribute("target", "_blank");
+          anchor.setAttribute("rel", "noopener noreferrer");
+          image.setAttribute("src", photo.src);
+          image.setAttribute("decoding", "async");
+          image.setAttribute("loading", "lazy");
+          container.setAttribute("class", "thumbnail");
+          const lens = photo.lens === "-" ? "No Lens Information" : photo.lens;
+          metaspan.innerHTML = "";
+          metaspan.innerHTML += `<div><strong>${photo.title}</strong></div>`;
+          metaspan.innerHTML += `<div>${photo.datetime}</div>`;
+          metaspan.innerHTML += `<div>${photo.camera}\n(${lens})</div>`;
+          anchor.appendChild(image);
+          anchor.appendChild(metaspan);
+          container.appendChild(anchor);
+          document.querySelector(".app-container").insertAdjacentElement("afterbegin", container);
+        }
+      });
+    </script>
+  </body>
 
 </html>
