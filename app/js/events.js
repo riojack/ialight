@@ -18,6 +18,5 @@ function _sideBarMouseLeave() {
 
 function _sidebarClose(/** @type {MouseEvent} */e) {
   document.body.className = "";
-
   e.preventDefault();
 }

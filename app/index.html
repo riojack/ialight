@@ -40,7 +40,7 @@
   </div>
   <div class="popover"></div>
   <script>
-    window.addEventListener('load', function () {
+    window.addEventListener("load", function () {
       const sidebar = document.querySelector("#sidebar");
       attachHandlers(sidebar)
       for (let i = photos.length - 1; i >= 0; i--) {
@@ -57,7 +57,7 @@
         image.setAttribute("loading", "lazy")
         container.setAttribute("class", "thumbnail")
         const lens = photo.lens === "-" ? "No Lens Information" : photo.lens;
-        metaspan.innerHTML = '';
+        metaspan.innerHTML = "";
         metaspan.innerHTML += `<div><strong>${photo.title}</strong></div>`;
         metaspan.innerHTML += `<div>${photo.datetime}</div>`;
         metaspan.innerHTML += `<div>${photo.camera}\n(${lens})</div>`;

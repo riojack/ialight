@@ -53,7 +53,7 @@
     </div>
   </div>
   <script>
-    window.addEventListener('load', function () {
+    window.addEventListener("load", function () {
       const sidebar = document.querySelector("#sidebar");
       attachHandlers(sidebar);
       const params = new URLSearchParams(window.location.search);
@@ -68,8 +68,8 @@
           photosWithTag.push(photo);
         }
       }
-      const modal = document.getElementById('image-modal');
-      modal.addEventListener('show.bs.modal', (e) => {
+      const modal = document.getElementById("image-modal");
+      modal.addEventListener("show.bs.modal", (e) => {
         console.log(e.relatedTarget.src);
         const src = e.relatedTarget.src;
         document.getElementById("img-to-show").setAttribute("src", src);

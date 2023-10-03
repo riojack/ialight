@@ -150,7 +150,6 @@ body {
   width: 45%;
   max-width: 16px;
   opacity: 1;
-
   transition: opacity 0.2s ease-out;
 }
 
@@ -183,7 +182,6 @@ body {
 
 .sideBar-open #sidebar .sidebar-exit {
   display: block;
-
 }
 
 .sidebar-app-logo {
@@ -258,7 +256,6 @@ body {
   display: none;
 }
 
-
 @keyframes fadein {
   from {
     opacity: 0%;
@@ -267,5 +264,4 @@ body {
   to {
     opacity: 100%;
   }
-
 }
