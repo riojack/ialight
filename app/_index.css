@@ -1,235 +1,271 @@
 body {
-    background-color: var(--theme-primary-3);
+  background-color: var(--theme-primary-3);
 }
+
 .modal-content {
-    backdrop-filter: blur(10px);
-    background-color: transparent;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
 }
+
 .btn-close {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
+
 .modal-header {
-    border-bottom-width: 0;
+  border-bottom-width: 0;
 }
+
 .app-container {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 #orientation-warning {
-    display: none;
-    position: absolute;
-    top: 0;
-    margin: 0 auto;
-    background-color: var(--theme-primary-3);
+  display: none;
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  background-color: var(--theme-primary-3);
 }
+
 @media (orientation: portrait) {
-    #orientation-warning {
-        display: block;
-    }
-}
-.app-container > div.thumbnail
-{
-    width: 33%;
-    height: 50vh;
-    flex-grow: 1;
-    position: relative;
-}
-.app-container > div.thumbnail a {
+  #orientation-warning {
     display: block;
-    height: 100%
-}
-.app-container > div.thumbnail img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  }
 }
 
-.app-container > div.thumbnail span {
-    position: absolute;
-    bottom: 25px;
-    left: 0;
-    width: 100%;
-    padding: 0 0.45vw;
-    color: white;
-    opacity: 0;
-}
-.app-container > div.thumbnail:hover span {
-    animation-delay: 0s;
-    animation-duration: 1s;
-    animation-name: fadein;
-    animation-fill-mode: forwards;
+.app-container>div.thumbnail {
+  width: 33%;
+  height: 50vh;
+  flex-grow: 1;
+  position: relative;
 }
 
-.app-container > div.thumbnail:nth-child(5n+1),
-.app-container > div.thumbnail:nth-child(5n+2) {
-    width: 50%;
-    height: 50vh;
+.app-container>div.thumbnail a {
+  display: block;
+  height: 100%
 }
 
-.app-container > div.thumbnail:nth-child(5n+1) img,
-.app-container > div.thumbnail:nth-child(5n+2) img {
-     height: 100%;
-     width: 100%;
-     object-fit: cover;
-     object-position: center;
- }
- 
+.app-container>div.thumbnail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.app-container>div.thumbnail span {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  padding: 0 0.45vw;
+  color: white;
+  opacity: 0;
+}
+
+.app-container>div.thumbnail:hover span {
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-name: fadein;
+  animation-fill-mode: forwards;
+}
+
+.app-container>div.thumbnail:nth-child(5n+1),
+.app-container>div.thumbnail:nth-child(5n+2) {
+  width: 50%;
+  height: 50vh;
+}
+
+.app-container>div.thumbnail:nth-child(5n+1) img,
+.app-container>div.thumbnail:nth-child(5n+2) img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .app-logo {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    opacity: 30%;
-    transition: opacity 0.2s ease-in-out;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  opacity: 30%;
+  transition: opacity 0.2s ease-in-out;
 }
-.sideBar-open .app-logo {
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-#sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 3vw;
-    text-align: center;
-    height: 100vh;
-    overflow: hidden;
 
-    transition: width 0.2s ease-out,
-                background-color 0.2s ease-out;
+.sideBar-open .app-logo {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
+
+#sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 3vw;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+
+  transition: width 0.2s ease-out,
+    background-color 0.2s ease-out;
+}
+
 .sideBar-open #sidebar {
-    width: 12vw;
-    background-color: var(--theme-backdrop);
+  width: 12vw;
+  background-color: var(--theme-backdrop);
 }
+
 @media (orientation: landscape) and (max-height: 575.98px) {
-    #sidebar  {
-        width: 6vw;
-    }
-    .sideBar-open #sidebar  {
-        width: 80vw;
-    }
+  #sidebar {
+    width: 6vw;
+  }
+
+  .sideBar-open #sidebar {
+    width: 80vw;
+  }
 }
+
 @media (orientation: portrait) {
-    #sidebar  {
-        width: 12vw;
-    }
-    .sideBar-open #sidebar  {
-        width: 100vw;
-    }
-    #sidebar img.hamburger {
-        max-width: 64px;
-    }
-    #sidebar .sidebar-exit span{
-        right: 20px;
-        top: 0;
-    }
+  #sidebar {
+    width: 12vw;
+  }
+
+  .sideBar-open #sidebar {
+    width: 100vw;
+  }
+
+  #sidebar img.hamburger {
+    max-width: 64px;
+  }
+
+  #sidebar .sidebar-exit span {
+    right: 20px;
+    top: 0;
+  }
 }
 
 #sidebar img.hamburger {
-    width: 45%;
-    max-width: 16px;
-    opacity: 1;
+  width: 45%;
+  max-width: 16px;
+  opacity: 1;
 
-    transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .sideBar-open #sidebar img.hamburger {
-    opacity: 0;
+  opacity: 0;
 }
+
 #sidebar .sidebar-exit {
-    display: none;
-    color: white;
-    position: relative;
+  display: none;
+  color: white;
+  position: relative;
 }
+
 #sidebar .sidebar-exit span {
-    position: absolute;
-    right: 5px;
-    top: -20px;
+  position: absolute;
+  right: 5px;
+  top: -20px;
 }
+
 #sidebar .sidebar-exit span a {
-    text-decoration-line: none;
-    color: black;
-    background-color: var(--theme-primary-2);
-    display: block;
-    height: 21px;
-    width: 21px;
-    border-radius: 12.5px;
-    font-size: .85rem;
+  text-decoration-line: none;
+  color: black;
+  background-color: var(--theme-primary-2);
+  display: block;
+  height: 21px;
+  width: 21px;
+  border-radius: 12.5px;
+  font-size: .85rem;
 }
+
 .sideBar-open #sidebar .sidebar-exit {
-    display: block;
+  display: block;
 
 }
+
 .sidebar-app-logo {
-    width: 85%;
-    margin: 0 auto;
-    opacity: 0;
+  width: 85%;
+  margin: 0 auto;
+  opacity: 0;
 }
+
 .sideBar-open #sidebar .sidebar-app-logo {
-    opacity: 75%;
+  opacity: 75%;
 }
+
 #sidebar .menu {
-    opacity: 0;
+  opacity: 0;
 }
+
 #sidebar .menu ul {
-    margin: 0;
-    padding: 0;
-} 
+  margin: 0;
+  padding: 0;
+}
+
 #sidebar .menu ul li {
-    display: block;
+  display: block;
 }
+
 #sidebar .menu ul li a {
-    padding: 5%;
-    display: block;
-    text-decoration-line: none;
-    color: var(--theme-primary-2);
-    font-size: 1.5rem;
+  padding: 5%;
+  display: block;
+  text-decoration-line: none;
+  color: var(--theme-primary-2);
+  font-size: 1.5rem;
 }
+
 #sidebar .menu ul li a:hover {
-    text-decoration-line: underline;
+  text-decoration-line: underline;
 }
+
 @media (orientation: portrait) {
-    #sidebar .menu ul li a {
-        font-size: 2.5rem;
-    }
+  #sidebar .menu ul li a {
+    font-size: 2.5rem;
+  }
 }
+
 .sideBar-open #sidebar .menu {
-    opacity: 1;
+  opacity: 1;
 }
-@media (orientation: landscape) and (max-height: 575.98px)  {
-    .sideBar-open #sidebar {
-        width: 100vw;
-    }
-    .sidebar-app-logo {
-        width: 50%;
-        float: left;
-        opacity: 0;
-    }
-    .menu {
-        width: 50%;
-        float: left;
-    }
+
+@media (orientation: landscape) and (max-height: 575.98px) {
+  .sideBar-open #sidebar {
+    width: 100vw;
+  }
+
+  .sidebar-app-logo {
+    width: 50%;
+    float: left;
+    opacity: 0;
+  }
+
+  .menu {
+    width: 50%;
+    float: left;
+  }
 }
+
 .popover {
-    position: absolute;
-    top: 25px;
-    left: middle;
-    height: 85%;
-    width: 85%;
-    border: 1 solid white;
-    display: none;
+  position: absolute;
+  top: 25px;
+  left: middle;
+  height: 85%;
+  width: 85%;
+  border: 1 solid white;
+  display: none;
 }
 
 
 @keyframes fadein {
-    from {
-        opacity: 0%;
-    }
-    to {
-        opacity: 100%;
-    }
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
 
 }

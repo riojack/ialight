@@ -2,72 +2,72 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Iowa Light</title>
-    <link rel="stylesheet" href="vendor/bootstrap-reboot.css">
-    <link rel="stylesheet" href="_variables.css">
-    <link rel="stylesheet" href="_index.css">
-    <link rel="stylesheet" href="_tags.css">
-    <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
-    <script src="js/data.js"></script>
-    <script src="js/events.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Iowa Light</title>
+  <link rel="stylesheet" href="vendor/bootstrap-reboot.css">
+  <link rel="stylesheet" href="_variables.css">
+  <link rel="stylesheet" href="_index.css">
+  <link rel="stylesheet" href="_tags.css">
+  <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
+  <script src="js/data.js"></script>
+  <script src="js/events.js"></script>
 </head>
 
 <body>
-    <div class="app-container">
-        <div id="sidebar">
-            <a href="about:blank" class="sidebar-opener"><img src="images/hamburger.svg" class="hamburger"></a>
-            <div class="sidebar-exit">
-                <span><a href="about:blank" class="sidebar-closer">X</a></span>
-            </div>
-            <div class="sidebar-app-logo">
-                <img src="images/ialight-logo.svg" />
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tags.html">Tags</a></li>
-                </ul>
-            </nav>
-        </div>
+  <div class="app-container">
+    <div id="sidebar">
+      <a href="about:blank" class="sidebar-opener"><img src="images/hamburger.svg" class="hamburger"></a>
+      <div class="sidebar-exit">
+        <span><a href="about:blank" class="sidebar-closer">X</a></span>
+      </div>
+      <div class="sidebar-app-logo">
+        <img src="images/ialight-logo.svg" />
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tags.html">Tags</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="app-logo">
-        <img src="images/ialight-logo.svg" width="160" />
-    </div>
-    <div class="tag-grid"></div>
-    <div class="popover"></div>
-    <script>
-        function extractTags(Photo, tagMap) {
-            for (let tag of Photo.tags){
-                if (tag.startsWith("camera:")) {
-                    continue
-                } 
-                tag = tag.replace("t:", "")
-                tagMap.set(tag, Photo.src)
-            }
+  </div>
+  <div class="app-logo">
+    <img src="images/ialight-logo.svg" width="160" />
+  </div>
+  <div class="tag-grid"></div>
+  <div class="popover"></div>
+  <script>
+    function extractTags(Photo, tagMap) {
+      for (let tag of Photo.tags) {
+        if (tag.startsWith("camera:")) {
+          continue
         }
-        window.addEventListener('load', function () {
-            const sidebar = document.querySelector("#sidebar");
-            attachHandlers(sidebar);
-            const uniqueTags = new Map();
-            for (let x of photos){
-                extractTags(x, uniqueTags)
-            }
-            for (const [tag, src] of uniqueTags){
-                const container = document.createElement("div");
-                const anchor = document.createElement("a");
-                container.setAttribute("class", "tag-thumbnail")
-                anchor.setAttribute("style", `background:center center url("${src}")`);
-                anchor.setAttribute("href", "view_tag.html?tag="+encodeURIComponent(tag))
+        tag = tag.replace("t:", "")
+        tagMap.set(tag, Photo.src)
+      }
+    }
+    window.addEventListener('load', function () {
+      const sidebar = document.querySelector("#sidebar");
+      attachHandlers(sidebar);
+      const uniqueTags = new Map();
+      for (let x of photos) {
+        extractTags(x, uniqueTags)
+      }
+      for (const [tag, src] of uniqueTags) {
+        const container = document.createElement("div");
+        const anchor = document.createElement("a");
+        container.setAttribute("class", "tag-thumbnail")
+        anchor.setAttribute("style", `background:center center url("${src}")`);
+        anchor.setAttribute("href", "view_tag.html?tag=" + encodeURIComponent(tag))
 
-                anchor.innerHTML = `<h1>${tag}</h1>`;
-                container.appendChild(anchor);
-                document.querySelector(".tag-grid").insertAdjacentElement("afterbegin", container);
-            }
-        });
-    </script>
+        anchor.innerHTML = `<h1>${tag}</h1>`;
+        container.appendChild(anchor);
+        document.querySelector(".tag-grid").insertAdjacentElement("afterbegin", container);
+      }
+    });
+  </script>
 </body>
 
 </html>
