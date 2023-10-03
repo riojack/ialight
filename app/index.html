@@ -12,6 +12,7 @@
     <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
     <script src="js/data.js"></script>
     <script src="js/events.js"></script>
+    <script src="js/index_page.js"></script>
   </head>
 
   <body>
@@ -42,30 +43,9 @@
     <script>
       window.addEventListener("load", function () {
         const sidebar = document.querySelector("#sidebar");
+
         attachHandlers(sidebar);
-        for (let i = photos.length - 1; i >= 0; i--) {
-          const photo = photos[i];
-          const container = document.createElement("div");
-          const anchor = document.createElement("a");
-          const image = document.createElement("img");
-          const metaspan = document.createElement("span");
-          anchor.setAttribute("href", photo.src);
-          anchor.setAttribute("target", "_blank");
-          anchor.setAttribute("rel", "noopener noreferrer");
-          image.setAttribute("src", photo.src);
-          image.setAttribute("decoding", "async");
-          image.setAttribute("loading", "lazy");
-          container.setAttribute("class", "thumbnail");
-          const lens = photo.lens === "-" ? "No Lens Information" : photo.lens;
-          metaspan.innerHTML = "";
-          metaspan.innerHTML += `<div><strong>${photo.title}</strong></div>`;
-          metaspan.innerHTML += `<div>${photo.datetime}</div>`;
-          metaspan.innerHTML += `<div>${photo.camera}\n(${lens})</div>`;
-          anchor.appendChild(image);
-          anchor.appendChild(metaspan);
-          container.appendChild(anchor);
-          document.querySelector(".app-container").insertAdjacentElement("afterbegin", container);
-        }
+        setupIndexPage(document, photos);
       });
     </script>
   </body>

@@ -14,6 +14,7 @@
     <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
     <script src="js/data.js"></script>
     <script src="js/events.js"></script>
+    <script src="js/view_tag_page.js"></script>
     <script src="vendor/bootstrap.min.js"></script>
   </head>
 
@@ -55,36 +56,9 @@
     <script>
       window.addEventListener("load", function () {
         const sidebar = document.querySelector("#sidebar");
+
         attachHandlers(sidebar);
-
-        const params = new URLSearchParams(window.location.search);
-        const tagToSearchFor = "t:" + params.get("tag");
-        const photosWithTag = [];
-
-        // Find Photos with tagToSearchFor
-        for (const photo of photos) {
-          const photoTags = photo.tags;
-          if (photoTags.indexOf(tagToSearchFor) >= 0) {
-            photosWithTag.push(photo);
-          }
-        }
-        const modal = document.getElementById("image-modal");
-        modal.addEventListener("show.bs.modal", (e) => {
-          console.log(e.relatedTarget.src);
-          const src = e.relatedTarget.src;
-          document.getElementById("img-to-show").setAttribute("src", src);
-        });
-        const grid = document.querySelector(".tag-image-grid");
-        // Show the matching photos on screen
-        for (const photo of photosWithTag) {
-          const container = document.createElement("div");
-          const img = document.createElement("img");
-          img.setAttribute("src", photo.src);
-          img.setAttribute("data-bs-toggle", "modal");
-          img.setAttribute("data-bs-target", "#image-modal");
-          container.appendChild(img);
-          grid.appendChild(container);
-        }
+        setupViewTagPage(document, window, photos);
       });
     </script>
   </body>

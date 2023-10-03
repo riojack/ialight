@@ -13,6 +13,7 @@
     <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
     <script src="js/data.js"></script>
     <script src="js/events.js"></script>
+    <script src="js/tags_page.js"></script>
   </head>
 
   <body>
@@ -39,33 +40,11 @@
     <div class="tag-grid"></div>
     <div class="popover"></div>
     <script>
-      function extractTags(Photo, tagMap) {
-        for (let tag of Photo.tags) {
-          if (tag.startsWith("camera:")) {
-            continue;
-          }
-          tag = tag.replace("t:", "");
-          tagMap.set(tag, Photo.src);
-        }
-      }
       window.addEventListener("load", function () {
         const sidebar = document.querySelector("#sidebar");
-        attachHandlers(sidebar);
-        const uniqueTags = new Map();
-        for (let x of photos) {
-          extractTags(x, uniqueTags);
-        }
-        for (const [tag, src] of uniqueTags) {
-          const container = document.createElement("div");
-          const anchor = document.createElement("a");
-          container.setAttribute("class", "tag-thumbnail");
-          anchor.setAttribute("style", `background:center center url("${src}")`);
-          anchor.setAttribute("href", "view_tag.html?tag=" + encodeURIComponent(tag));
 
-          anchor.innerHTML = `<h1>${tag}</h1>`;
-          container.appendChild(anchor);
-          document.querySelector(".tag-grid").insertAdjacentElement("afterbegin", container);
-        }
+        attachHandlers(sidebar);
+        setupTagPage(document, photos);
       });
     </script>
   </body>
