@@ -3,5 +3,6 @@
   "xml.format.maxLineWidth": 120,
   "editor.insertSpaces": true,
   "html.format.indentInnerHtml": true,
-  "javascript.format.semicolons": "insert"
+  "javascript.format.semicolons": "insert",
+  "css.format.spaceAroundSelectorSeparator": true
 }
