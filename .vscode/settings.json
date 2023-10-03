@@ -1,0 +1,5 @@
+{
+  "files.autoSave": "onFocusChange",
+  "xml.format.maxLineWidth": 120,
+  "editor.insertSpaces": true
+}
