@@ -17,17 +17,17 @@ body {
 
 .app-container {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
 #orientation-warning {
+  background-color: var(--theme-primary-3);
   display: none;
+  margin: 0 auto;
   position: absolute;
   top: 0;
-  margin: 0 auto;
-  background-color: var(--theme-primary-3);
 }
 
 @media (orientation: portrait) {
@@ -36,60 +36,60 @@ body {
   }
 }
 
-.app-container>div.thumbnail {
-  width: 33%;
-  height: 50vh;
+.app-container > div.thumbnail {
   flex-grow: 1;
+  height: 50vh;
   position: relative;
+  width: 33%;
 }
 
-.app-container>div.thumbnail a {
+.app-container > div.thumbnail a {
   display: block;
   height: 100%
 }
 
-.app-container>div.thumbnail img {
+.app-container > div.thumbnail img {
   height: 100%;
-  width: 100%;
   object-fit: cover;
-}
-
-.app-container>div.thumbnail span {
-  position: absolute;
-  bottom: 25px;
-  left: 0;
   width: 100%;
-  padding: 0 0.45vw;
-  color: white;
-  opacity: 0;
 }
 
-.app-container>div.thumbnail:hover span {
+.app-container > div.thumbnail span {
+  bottom: 25px;
+  color: white;
+  left: 0;
+  opacity: 0;
+  padding: 0 0.45vw;
+  position: absolute;
+  width: 100%;
+}
+
+.app-container > div.thumbnail:hover span {
   animation-delay: 0s;
   animation-duration: 1s;
-  animation-name: fadein;
   animation-fill-mode: forwards;
+  animation-name: fadein;
 }
 
-.app-container>div.thumbnail:nth-child(5n+1),
-.app-container>div.thumbnail:nth-child(5n+2) {
-  width: 50%;
+.app-container > div.thumbnail:nth-child(5n+1),
+.app-container > div.thumbnail:nth-child(5n+2) {
   height: 50vh;
+  width: 50%;
 }
 
-.app-container>div.thumbnail:nth-child(5n+1) img,
-.app-container>div.thumbnail:nth-child(5n+2) img {
+.app-container > div.thumbnail:nth-child(5n+1) img,
+.app-container > div.thumbnail:nth-child(5n+2) img {
   height: 100%;
-  width: 100%;
   object-fit: cover;
   object-position: center;
+  width: 100%;
 }
 
 .app-logo {
-  position: fixed;
   bottom: 10px;
-  right: 10px;
   opacity: 30%;
+  position: fixed;
+  right: 10px;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -99,22 +99,20 @@ body {
 }
 
 #sidebar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 3vw;
-  text-align: center;
   height: 100vh;
+  left: 0;
   overflow: hidden;
-
-  transition: width 0.2s ease-out,
-    background-color 0.2s ease-out;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: width 0.2s ease-out, background-color 0.2s ease-out;
+  width: 3vw;
+  z-index: 100;
 }
 
 .sideBar-open #sidebar {
-  width: 12vw;
   background-color: var(--theme-backdrop);
+  width: 12vw;
 }
 
 @media (orientation: landscape) and (max-height: 575.98px) {
@@ -147,10 +145,10 @@ body {
 }
 
 #sidebar img.hamburger {
-  width: 45%;
   max-width: 16px;
   opacity: 1;
   transition: opacity 0.2s ease-out;
+  width: 45%;
 }
 
 .sideBar-open #sidebar img.hamburger {
@@ -158,8 +156,8 @@ body {
 }
 
 #sidebar .sidebar-exit {
-  display: none;
   color: white;
+  display: none;
   position: relative;
 }
 
@@ -170,14 +168,14 @@ body {
 }
 
 #sidebar .sidebar-exit span a {
-  text-decoration-line: none;
-  color: black;
   background-color: var(--theme-primary-2);
-  display: block;
-  height: 21px;
-  width: 21px;
   border-radius: 12.5px;
+  color: black;
+  display: block;
   font-size: .85rem;
+  height: 21px;
+  text-decoration-line: none;
+  width: 21px;
 }
 
 .sideBar-open #sidebar .sidebar-exit {
@@ -185,9 +183,9 @@ body {
 }
 
 .sidebar-app-logo {
-  width: 85%;
   margin: 0 auto;
   opacity: 0;
+  width: 85%;
 }
 
 .sideBar-open #sidebar .sidebar-app-logo {
@@ -208,11 +206,11 @@ body {
 }
 
 #sidebar .menu ul li a {
-  padding: 5%;
-  display: block;
-  text-decoration-line: none;
   color: var(--theme-primary-2);
+  display: block;
   font-size: 1.5rem;
+  padding: 5%;
+  text-decoration-line: none;
 }
 
 #sidebar .menu ul li a:hover {
@@ -235,25 +233,25 @@ body {
   }
 
   .sidebar-app-logo {
-    width: 50%;
     float: left;
     opacity: 0;
+    width: 50%;
   }
 
   .menu {
-    width: 50%;
     float: left;
+    width: 50%;
   }
 }
 
 .popover {
   position: absolute;
-  top: 25px;
-  left: middle;
-  height: 85%;
-  width: 85%;
   border: 1 solid white;
   display: none;
+  height: 85%;
+  left: middle;
+  top: 25px;
+  width: 85%;
 }
 
 @keyframes fadein {
