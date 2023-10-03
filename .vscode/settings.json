@@ -1,5 +1,7 @@
 {
   "files.autoSave": "onFocusChange",
   "xml.format.maxLineWidth": 120,
-  "editor.insertSpaces": true
+  "editor.insertSpaces": true,
+  "html.format.indentInnerHtml": true,
+  "javascript.format.semicolons": "insert"
 }
