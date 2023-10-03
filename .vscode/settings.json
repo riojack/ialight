@@ -1,8 +1,8 @@
 {
-  "files.autoSave": "onFocusChange",
-  "xml.format.maxLineWidth": 120,
+  "css.format.spaceAroundSelectorSeparator": true,
   "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
   "html.format.indentInnerHtml": true,
-  "javascript.format.semicolons": "insert",
-  "css.format.spaceAroundSelectorSeparator": true
+  "javascript.format.semicolons": "insert"
 }

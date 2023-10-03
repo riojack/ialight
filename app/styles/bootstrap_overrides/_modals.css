@@ -1,0 +1,12 @@
+.modal-content {
+    backdrop-filter: blur(10px);
+    background-color: transparent;
+}
+
+.btn-close {
+    background-color: #ffffff;
+}
+
+.modal-header {
+    border-bottom-width: 0;
+}

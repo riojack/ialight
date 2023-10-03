@@ -1,3 +1,6 @@
+@import url("./_variables.css");
+@import url("./_index.css");
+
 body {
   overflow-x: hidden;
 }

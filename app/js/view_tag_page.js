@@ -25,13 +25,18 @@ function setupViewTagPage(/** @type {Document} */ doc, /** @type {Window} */ wnd
   for (const photo of photosWithTag) {
     const container = doc.createElement("div");
     const img = doc.createElement("img");
+    const anchor = doc.createElement("a");
 
+    anchor.setAttribute("href", "/");
+    anchor.addEventListener("click", doNothing);
     img.setAttribute("src", photo.src);
     img.setAttribute("data-bs-toggle", "modal");
     img.setAttribute("data-bs-target", "#image-modal");
+    anchor.appendChild(img);
 
-    container.appendChild(img);
+    container.appendChild(anchor);
 
     grid.appendChild(container);
   }
 }
+
