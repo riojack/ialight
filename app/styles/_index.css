@@ -173,6 +173,10 @@ body {
     width: 85%;
 }
 
+.sidebar-app-logo img {
+    width: 100%;
+}
+
 .sideBar-open #sidebar .sidebar-app-logo {
     opacity: 75%;
 }

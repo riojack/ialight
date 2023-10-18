@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Iowa Light</title>
     <link rel="stylesheet" href="vendor/bootstrap-reboot.css">
     <link rel="stylesheet" href="styles/_tags.css">
-    <link rel="icon" href="images/ialight-logo.png" type="image/x-icon">
+    <link rel="icon" href="images/ialightlogo.svg" type="image/x-icon">
     <script src="js/data.js"></script>
     <script src="js/events.js"></script>
     <script src="js/tags_page.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="app-container">
-      <div id="sidebar">
-        <a href="about:blank" class="sidebar-opener"><img src="images/hamburger.svg" class="hamburger"></a>
-        <div class="sidebar-exit">
-          <span><a href="about:blank" class="sidebar-closer">X</a></span>
+        <div id="sidebar">
+            <a href="about:blank" class="sidebar-opener"><img src="images/hamburger.svg" class="hamburger"></a>
+            <div class="sidebar-exit">
+                <span><a href="about:blank" class="sidebar-closer">X</a></span>
+            </div>
+            <div class="sidebar-app-logo">
+                <img src="images/ialightlogo.svg" />
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tags.html">Tags</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="sidebar-app-logo">
-          <img src="images/ialight-logo.svg" />
-        </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="tags.html">Tags</a></li>
-          </ul>
-        </nav>
-      </div>
     </div>
     <div class="app-logo">
-      <img src="images/ialight-logo.svg" width="160" />
+        <img src="images/ialightlogo.svg" width="160" />
     </div>
     <div class="tag-grid"></div>
     <div class="popover"></div>
     <script>
-      window.addEventListener("load", function () {
-        const sidebar = document.querySelector("#sidebar");
+        window.addEventListener("load", function() {
+            const sidebar = document.querySelector("#sidebar");
 
-        attachHandlers(sidebar);
-        setupTagPage(document, photos);
-      });
+            attachHandlers(sidebar);
+            setupTagPage(document, photos);
+        });
     </script>
-  </body>
+</body>
 
 </html>
