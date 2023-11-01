@@ -1,9 +1,7 @@
 @import url("./_variables.css");
 @import url("./bootstrap_overrides/_modals.css");
-
-
 body {
-    background-color: var(--theme-primary-3);
+    background-color: var(--theme-background);
 }
 
 .app-container {
@@ -250,4 +248,58 @@ body {
     to {
         opacity: 100%;
     }
+}
+
+#search-container {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: 20%;
+}
+
+#search-input {
+    padding-left: 3rem;
+    outline: 1px solid rgba(255, 255, 255, 0.45);
+    font-size: 200%;
+    border: none;
+    border-radius: 12.5rem;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: white;
+    width: 100%;
+    backdrop-filter: blur(0);
+    transition: backdrop-filter 1s ease-in-out;
+}
+
+#search-input:focus {
+    backdrop-filter: blur(10px);
+}
+
+#search-results {
+    display: none;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+#search-container:has(#search-input:not(:placeholder-shown)) #search-results {
+    display: block;
+    height: 100px;
+}
+
+#search-container:has(#search-input:focus) {
+    width: 80%;
+    transition: width 1s ease-in-out;
+}
+
+#search-container:not(:has(#search-input:focus)) {
+    transition: width 1s ease-in-out;
+}
+
+#search-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
