@@ -303,3 +303,27 @@ body {
     top: 10px;
     left: 10px;
 }
+
+#search-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#search-container ul li {
+    height: 100%;
+}
+
+#search-container ul li a {
+    height: 100%;
+    display: block;
+}
+
+#search-container ul li a img {
+    height: 100%;
+}
