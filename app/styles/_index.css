@@ -1,5 +1,9 @@
 @import url("./_variables.css");
 @import url("./bootstrap_overrides/_modals.css");
+::selection {
+    background: transparent;
+}
+
 body {
     background-color: var(--theme-background);
 }
@@ -281,21 +285,26 @@ body {
 #search-results {
     display: none;
     width: 100%;
+    max-height: 700px;
+    overflow-y: scroll;
     backdrop-filter: blur(10px);
 }
 
 #search-container:has(#search-input:not(:placeholder-shown)) #search-results {
     display: block;
-    height: 100px;
 }
 
 #search-container:has(#search-input:focus) {
-    width: 80%;
+    width: 50%;
     transition: width 1s ease-in-out;
 }
 
 #search-container:not(:has(#search-input:focus)) {
     transition: width 1s ease-in-out;
+}
+
+#search-container:not(:has(#search-input:focus)) #search-results {
+    display: none;
 }
 
 #search-icon {
@@ -306,8 +315,8 @@ body {
 
 #search-container ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     list-style: none;
@@ -316,14 +325,27 @@ body {
 }
 
 #search-container ul li {
-    height: 100%;
+    margin-bottom: .35rem;
+    height: 100px;
 }
 
 #search-container ul li a {
+    color: white;
     height: 100%;
     display: block;
+    cursor: pointer;
+}
+
+#search-container ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 #search-container ul li a img {
     height: 100%;
+    display: inline;
+}
+
+#search-container ul li a p {
+    padding: 0 1.5rem;
+    display: inline;
 }
