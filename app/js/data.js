@@ -1,6 +1,6 @@
 const photos = [{
         title: "Mushroom in Leaves",
-        src: "images/image-001.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/woodland-mounds-002/UhwnlByDQB7jnwpT_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "September 10th, 2017",
