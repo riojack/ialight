@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,49 +16,49 @@
     <script src="js/index_page.js"></script>
     <script src="vendor/bootstrap.min.js"></script>
     <script src="js/search.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="app-container">
-        <div id="orientation-warning">
-            Website is best experienced in landscape mode.
+      <div id="orientation-warning">
+        Website is best experienced in landscape mode.
+      </div>
+      <div id="sidebar">
+        <a href="about:blank" class="sidebar-opener"><img src="images/hamburger.svg" class="hamburger"></a>
+        <div class="sidebar-exit">
+          <span><a href="about:blank" class="sidebar-closer">X</a></span>
         </div>
-        <div id="sidebar">
-            <a href="about:blank" class="sidebar-opener"><img src="images/hamburger.svg" class="hamburger"></a>
-            <div class="sidebar-exit">
-                <span><a href="about:blank" class="sidebar-closer">X</a></span>
-            </div>
-            <div class="sidebar-app-logo">
-                <img src="images/ialightlogo.svg" />
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tags.html">Tags</a></li>
-                </ul>
-            </nav>
+        <div class="sidebar-app-logo">
+          <img src="images/ialightlogo.svg" />
         </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tags.html">Tags</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <div class="app-logo">
-        <img src="images/ialightlogo.svg" width="160" />
+      <img src="images/ialightlogo.svg" width="160" />
     </div>
     <div id="search-container">
-        <input type="text" id="search-input" placeholder="Search" />
-        <img src="images/search.svg" width="32" id="search-icon" />
-        <div id="search-results"></div>
+      <input type="text" id="search-input" placeholder="Search" />
+      <img src="images/search.svg" width="32" id="search-icon" />
+      <div id="search-results"></div>
     </div>
 
     <script>
-        window.addEventListener("load", function() {
-            const sidebar = document.querySelector("#sidebar");
-            const searchBar = document.querySelector("#search-container")
-            addModal(document.body);
+      window.addEventListener("load", function () {
+        const sidebar = document.querySelector("#sidebar");
+        const searchBar = document.querySelector("#search-container");
+        addModal(document.body);
 
-            attachHandlers(sidebar, searchBar);
-            setupIndexPage(document, photos);
+        attachHandlers(sidebar, searchBar);
+        setupIndexPage(document, photos);
 
-        });
+      });
     </script>
-</body>
+  </body>
 
 </html>
