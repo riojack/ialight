@@ -8,7 +8,7 @@ const photos = [{
     },
     {
         title: "Trees in the fall",
-        src: "images/image-002.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/ei7lmB06kuPL6GoO_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "October 9th, 2018",
@@ -16,7 +16,7 @@ const photos = [{
     },
     {
         title: "Pretty flowers",
-        src: "images/image-003.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/dOSGlzviN0mVnZtx_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "August 30th, 2018",
@@ -24,7 +24,7 @@ const photos = [{
     },
     {
         title: "Pretty trees",
-        src: "images/image-004.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/PpZEGCBnuvHYOquu_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "August 30th, 2018",
@@ -32,7 +32,7 @@ const photos = [{
     },
     {
         title: "Lake with trees around",
-        src: "images/image-005.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/yellow-banks-001/EHAPgBFOOgW0TqfR_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "August 12th, 2018",
@@ -40,7 +40,7 @@ const photos = [{
     },
     {
         title: "Sunflower",
-        src: "images/image-006.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/VtbfPfbixPjuIlAw_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "August 6th, 2018",
@@ -48,7 +48,7 @@ const photos = [{
     },
     {
         title: "Blue Dragonfly",
-        src: "images/image-007.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/ahquabi-002/LSMREjHr0yaLbcYA_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "July 5th, 2018",
@@ -56,7 +56,7 @@ const photos = [{
     },
     {
         title: "On I-35 Northbound",
-        src: "images/image-008.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/road-001/i8W3zIZKVnsT_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "May 2nd, 2018",
@@ -64,7 +64,7 @@ const photos = [{
     },
     {
         title: "Butterfly on a flower",
-        src: "images/image-009.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-013/aF1h4nbGlWLm_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "August 16th, 2017",
@@ -72,7 +72,7 @@ const photos = [{
     },
     {
         title: "Peering over the edge",
-        src: "images/image-010.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-011/zaDnAJV0C0c7_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "June 16th, 2017",
@@ -80,7 +80,7 @@ const photos = [{
     },
     {
         title: "Burst of Sunset",
-        src: "images/image-011.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-010/PWuS2HF60q2M_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "June 14th, 2017",
@@ -88,7 +88,7 @@ const photos = [{
     },
     {
         title: "Tunnel of Trees",
-        src: "images/image-012.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-008/GcWyuDMlnKzw_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "February 19th, 2017",
@@ -96,7 +96,7 @@ const photos = [{
     },
     {
         title: "Barn Bridge",
-        src: "images/image-013.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/lake-easter-001/RrON2w4U3ZjY_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "October 9th, 2016",
@@ -104,7 +104,7 @@ const photos = [{
     },
     {
         title: "Babbling Brook",
-        src: "images/image-014.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-001/h7957ccxcs_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "September 10th, 2016",
@@ -112,7 +112,7 @@ const photos = [{
     },
     {
         title: "Cucumber Beetle",
-        src: "images/image-015.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/ahquabi-001/u62jih6zd4_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "August 28th, 2016",
@@ -120,7 +120,7 @@ const photos = [{
     },
     {
         title: "A Friend of All",
-        src: "images/image-016.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/pJJuZm960tBz_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "July 9th, 2016",
@@ -128,7 +128,7 @@ const photos = [{
     },
     {
         title: "Purples and Blues",
-        src: "images/image-017.jpg",
+        src: "https://d3rjsdgb9hzkgz.cloudfront.net/deck/summer-storm-001/2xEs9Md526Zs_50pct.jpg",
         camera: "Canon EOS 80D",
         lens: "-",
         datetime: "July 17, 2016",
