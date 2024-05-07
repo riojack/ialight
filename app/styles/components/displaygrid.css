@@ -1,0 +1,48 @@
+.app-container>div.thumbnail {
+    flex-grow: 1;
+    height: 50vh;
+    position: relative;
+    width: 33%;
+}
+
+.app-container>div.thumbnail a {
+    display: block;
+    height: 100%
+}
+
+.app-container>div.thumbnail img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.app-container>div.thumbnail span {
+    bottom: 25px;
+    color: var(--theme-text-light);
+    left: 0;
+    opacity: 0;
+    padding: 0 0.45vw;
+    position: absolute;
+    width: 100%;
+}
+
+.app-container>div.thumbnail:hover span {
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: fadein;
+}
+
+.app-container>div.thumbnail:nth-child(5n+1),
+.app-container>div.thumbnail:nth-child(5n+2) {
+    height: 50vh;
+    width: 50%;
+}
+
+.app-container>div.thumbnail:nth-child(5n+1) img,
+.app-container>div.thumbnail:nth-child(5n+2) img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
