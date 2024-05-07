@@ -1,9 +1,9 @@
 :root {
-    --theme-backdrop: rgba(0, 0, 0, 0.6);
-    --theme-primary-1: rgba(73, 149, 165, 1);
-    --theme-primary-2: rgba(191, 216, 195, 1);
-    --theme-primary-3: rgba(216, 188, 102, 1);
-    --theme-primary-4: rgba(242, 149, 93, 1);
-    --theme-primary-5: rgba(216, 107, 82, 1);
-    --theme-background: rgba(53, 53, 60, 1);
+  --theme-backdrop: rgba(0, 0, 0, 0.6);
+  --theme-primary-1: rgba(73, 149, 165, 1);
+  --theme-primary-2: rgba(191, 216, 195, 1);
+  --theme-primary-3: rgba(216, 188, 102, 1);
+  --theme-primary-4: rgba(242, 149, 93, 1);
+  --theme-primary-5: rgba(216, 107, 82, 1);
+  --theme-background: rgba(53, 53, 60, 1);
 }

@@ -1,351 +1,359 @@
 @import url("./_variables.css");
 @import url("./bootstrap_overrides/_modals.css");
+
 ::selection {
-    background: transparent;
+  background: transparent;
 }
 
 body {
-    background-color: var(--theme-background);
+  background-color: var(--theme-background);
 }
 
 .app-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 #orientation-warning {
-    display: none;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    color: rgba(255, 255, 255, 0.75);
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 @media (orientation: portrait) {
-    #orientation-warning {
-        display: block;
-    }
-}
-
-.app-container>div.thumbnail {
-    flex-grow: 1;
-    height: 50vh;
-    position: relative;
-    width: 33%;
-}
-
-.app-container>div.thumbnail a {
+  #orientation-warning {
     display: block;
-    height: 100%
+  }
 }
 
-.app-container>div.thumbnail img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
+.app-container > div.thumbnail {
+  flex-grow: 1;
+  height: 50vh;
+  position: relative;
+  width: 33%;
 }
 
-.app-container>div.thumbnail span {
-    bottom: 25px;
-    color: white;
-    left: 0;
-    opacity: 0;
-    padding: 0 0.45vw;
-    position: absolute;
-    width: 100%;
+.app-container > div.thumbnail a {
+  display: block;
+  height: 100%
 }
 
-.app-container>div.thumbnail:hover span {
-    animation-delay: 0s;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-name: fadein;
+.app-container > div.thumbnail img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
-.app-container>div.thumbnail:nth-child(5n+1),
-.app-container>div.thumbnail:nth-child(5n+2) {
-    height: 50vh;
-    width: 50%;
+.app-container > div.thumbnail span {
+  bottom: 25px;
+  color: white;
+  left: 0;
+  opacity: 0;
+  padding: 0 0.45vw;
+  position: absolute;
+  width: 100%;
 }
 
-.app-container>div.thumbnail:nth-child(5n+1) img,
-.app-container>div.thumbnail:nth-child(5n+2) img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
+.app-container > div.thumbnail:hover span {
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: fadein;
+}
+
+.app-container > div.thumbnail:nth-child(5n+1),
+.app-container > div.thumbnail:nth-child(5n+2) {
+  height: 50vh;
+  width: 50%;
+}
+
+.app-container > div.thumbnail:nth-child(5n+1) img,
+.app-container > div.thumbnail:nth-child(5n+2) img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }
 
 .app-logo {
-    bottom: 10px;
-    opacity: 30%;
-    position: fixed;
-    right: 10px;
-    transition: opacity 0.2s ease-in-out;
+  bottom: 10px;
+  opacity: 30%;
+  position: fixed;
+  right: 10px;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .sideBar-open .app-logo {
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 #sidebar {
-    height: 100vh;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    transition: width 0.2s ease-out, background-color 0.2s ease-out;
-    width: 3vw;
-    z-index: 100;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: width 0.2s ease-out, background-color 0.2s ease-out;
+  width: 3vw;
+  z-index: 100;
 }
 
 .sideBar-open #sidebar {
-    background-color: var(--theme-backdrop);
-    width: 12vw;
+  background-color: var(--theme-backdrop);
+  width: 12vw;
 }
 
 @media (orientation: landscape) and (max-height: 575.98px) {
-    #sidebar {
-        width: 6vw;
-    }
-    .sideBar-open #sidebar {
-        width: 80vw;
-    }
+  #sidebar {
+    width: 6vw;
+  }
+
+  .sideBar-open #sidebar {
+    width: 80vw;
+  }
 }
 
 @media (orientation: portrait) {
-    #sidebar {
-        width: 12vw;
-    }
-    .sideBar-open #sidebar {
-        width: 100vw;
-    }
-    #sidebar img.hamburger {
-        max-width: 64px;
-    }
-    #sidebar .sidebar-exit span {
-        right: 20px;
-        top: 0;
-    }
+  #sidebar {
+    width: 12vw;
+  }
+
+  .sideBar-open #sidebar {
+    width: 100vw;
+  }
+
+  #sidebar img.hamburger {
+    max-width: 64px;
+  }
+
+  #sidebar .sidebar-exit span {
+    right: 20px;
+    top: 0;
+  }
 }
 
 #sidebar img.hamburger {
-    max-width: 24px;
-    opacity: 1;
-    transition: opacity 0.2s ease-out;
-    width: 45%;
+  max-width: 24px;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+  width: 45%;
 }
 
 .sideBar-open #sidebar img.hamburger {
-    opacity: 0;
+  opacity: 0;
 }
 
 #sidebar .sidebar-exit {
-    color: white;
-    display: none;
-    position: relative;
+  color: white;
+  display: none;
+  position: relative;
 }
 
 #sidebar .sidebar-exit span {
-    position: absolute;
-    right: 5px;
-    top: -20px;
+  position: absolute;
+  right: 5px;
+  top: -20px;
 }
 
 #sidebar .sidebar-exit span a {
-    background-color: var(--theme-primary-2);
-    border-radius: 12.5px;
-    color: black;
-    display: block;
-    font-size: .85rem;
-    height: 21px;
-    text-decoration-line: none;
-    width: 21px;
+  background-color: var(--theme-primary-2);
+  border-radius: 12.5px;
+  color: black;
+  display: block;
+  font-size: .85rem;
+  height: 21px;
+  text-decoration-line: none;
+  width: 21px;
 }
 
 .sideBar-open #sidebar .sidebar-exit {
-    display: block;
+  display: block;
 }
 
 .sidebar-app-logo {
-    margin: 0 auto;
-    opacity: 0;
-    width: 85%;
+  margin: 0 auto;
+  opacity: 0;
+  width: 85%;
 }
 
 .sidebar-app-logo img {
-    width: 100%;
+  width: 100%;
 }
 
 .sideBar-open #sidebar .sidebar-app-logo {
-    opacity: 75%;
+  opacity: 75%;
 }
 
 #sidebar .menu {
-    opacity: 0;
+  opacity: 0;
 }
 
 #sidebar .menu ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #sidebar .menu ul li {
-    display: block;
+  display: block;
 }
 
 #sidebar .menu ul li a {
-    color: var(--theme-primary-2);
-    display: block;
-    font-size: 1.5rem;
-    padding: 5%;
-    text-decoration-line: none;
+  color: var(--theme-primary-2);
+  display: block;
+  font-size: 1.5rem;
+  padding: 5%;
+  text-decoration-line: none;
 }
 
 #sidebar .menu ul li a:hover {
-    text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 @media (orientation: portrait) {
-    #sidebar .menu ul li a {
-        font-size: 2.5rem;
-    }
+  #sidebar .menu ul li a {
+    font-size: 2.5rem;
+  }
 }
 
 .sideBar-open #sidebar .menu {
-    opacity: 1;
+  opacity: 1;
 }
 
 @media (orientation: landscape) and (max-height: 575.98px) {
-    .sideBar-open #sidebar {
-        width: 100vw;
-    }
-    .sidebar-app-logo {
-        float: left;
-        opacity: 0;
-        width: 50%;
-    }
-    .menu {
-        float: left;
-        width: 50%;
-    }
+  .sideBar-open #sidebar {
+    width: 100vw;
+  }
+
+  .sidebar-app-logo {
+    float: left;
+    opacity: 0;
+    width: 50%;
+  }
+
+  .menu {
+    float: left;
+    width: 50%;
+  }
 }
 
 .popover {
-    position: absolute;
-    border: 1 solid white;
-    display: none;
-    height: 85%;
-    left: middle;
-    top: 25px;
-    width: 85%;
+  position: absolute;
+  border: 1 solid white;
+  display: none;
+  height: 85%;
+  left: middle;
+  top: 25px;
+  width: 85%;
 }
 
 @keyframes fadein {
-    from {
-        opacity: 0%;
-    }
-    to {
-        opacity: 100%;
-    }
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
 }
 
 #search-container {
-    position: fixed;
-    top: 5px;
-    right: 5px;
-    width: 20%;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 20%;
 }
 
 #search-input {
-    padding-left: 3rem;
-    outline: 1px solid rgba(255, 255, 255, 0.45);
-    font-size: 200%;
-    border: none;
-    border-radius: 12.5rem;
-    background-image: none;
-    background-color: transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    color: white;
-    width: 100%;
-    backdrop-filter: blur(0);
-    transition: backdrop-filter 1s ease-in-out;
+  padding-left: 3rem;
+  outline: 1px solid rgba(255, 255, 255, 0.45);
+  font-size: 200%;
+  border: none;
+  border-radius: 12.5rem;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: white;
+  width: 100%;
+  backdrop-filter: blur(0);
+  transition: backdrop-filter 1s ease-in-out;
 }
 
 #search-input:focus {
-    backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 #search-results {
-    display: none;
-    width: 100%;
-    max-height: 700px;
-    overflow-y: scroll;
-    backdrop-filter: blur(10px);
+  display: none;
+  width: 100%;
+  max-height: 700px;
+  overflow-y: scroll;
+  backdrop-filter: blur(10px);
 }
 
 #search-container:has(#search-input:not(:placeholder-shown)) #search-results {
-    display: block;
+  display: block;
 }
 
 #search-container:has(#search-input:focus) {
-    width: 50%;
-    transition: width 1s ease-in-out;
+  width: 50%;
+  transition: width 1s ease-in-out;
 }
 
 #search-container:not(:has(#search-input:focus)) {
-    transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
 #search-container:not(:focus) #search-results {
-    display: none;
+  display: none;
 }
 
 #search-icon {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 #search-container ul {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 #search-container ul li {
-    margin-bottom: .35rem;
-    height: 100px;
+  margin-bottom: .35rem;
+  height: 100px;
 }
 
 #search-container ul li a {
-    color: white;
-    height: 100%;
-    display: block;
-    cursor: pointer;
+  color: white;
+  height: 100%;
+  display: block;
+  cursor: pointer;
 }
 
 #search-container ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 #search-container ul li a img {
-    height: 100%;
-    display: inline;
+  height: 100%;
+  display: inline;
 }
 
 #search-container ul li a p {
-    padding: 0 1.5rem;
-    display: inline;
+  padding: 0 1.5rem;
+  display: inline;
 }
