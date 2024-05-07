@@ -2,7 +2,7 @@
 end_of_line = lf
 insert_final_newline = true
 
-[*.{js,jsx,css,html,mustache,json}]
+[*.{js,jsx,css,svg,html,mustache,json}]
 indent_style = space
 indent_size = 2
 trim_trailing_whitespace = true
