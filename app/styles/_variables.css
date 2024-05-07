@@ -8,8 +8,10 @@
   --theme-primary-4: rgba(242, 149, 93, 1);
   --theme-primary-5: rgba(216, 107, 82, 1);
 
-  --theme-text-light: #F2F2F2;
-  --theme-text-dark: #0D0D0D;
+  --theme-text-light: rgb(242, 242, 242);
+  --theme-text-light-45pct: rgba(242, 242, 242, 0.45);
+  --theme-text-dark: rgb(13, 13, 13);
+  --theme-text-dark-45pct: rgba(13, 13, 13, 0.45);
 
   --tr-timer-short: 0.5s;
 }
