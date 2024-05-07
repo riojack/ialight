@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,39 +15,39 @@
     <script src="js/util.js"></script>
     <script src="js/view_tag_page.js"></script>
     <script src="vendor/bootstrap.min.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="app-container">
-      <div id="sidebar">
-        <a href="about:blank" class="sidebar-opener"><img src="images/svg/hamburger.svg" class="hamburger"></a>
-        <div class="sidebar-exit">
-          <span><a href="about:blank" class="sidebar-closer">X</a></span>
+        <div id="sidebar">
+            <a href="about:blank" class="sidebar-opener"><img src="images/svg/hamburger.svg" class="hamburger"></a>
+            <div class="sidebar-exit">
+                <span><a href="about:blank" class="sidebar-closer">X</a></span>
+            </div>
+            <div class="sidebar-app-logo">
+                <img src="images/svg/ialightlogo.svg" />
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tags.html">Tags</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="sidebar-app-logo">
-          <img src="images/svg/ialightlogo.svg" />
-        </div>
-        <nav class="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="tags.html">Tags</a></li>
-          </ul>
-        </nav>
-      </div>
     </div>
     <div class="app-logo">
-      <img src="images/svg/ialightlogo.svg" width="160" />
+        <img src="images/svg/ialightlogo.svg" width="160" />
     </div>
     <div class="tag-image-grid"></div>
     <script>
-      window.addEventListener("load", function () {
-        const sidebar = document.querySelector("#sidebar");
+        window.addEventListener("load", function() {
+            const sidebar = document.querySelector("#sidebar");
 
-        attachHandlers(sidebar);
-        addModal(document.body);
-        setupViewTagPage(document, window, photos);
-      });
+            addModal(document.body);
+            attachHandlers(sidebar);
+            setupViewTagPage(document, window, photos);
+        });
     </script>
-  </body>
+</body>
 
 </html>
