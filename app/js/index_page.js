@@ -9,7 +9,7 @@ function setupIndexPage( /** @type {Document} */ doc, /** @type {Array} */ listO
     anchor.setAttribute("href", "/");
     anchor.addEventListener("click", doNothing);
 
-    image.setAttribute("src", photo.src);
+    image.setAttribute("src", photo.alternate[0] || photo.src);
     image.setAttribute("decoding", "async");
     image.setAttribute("loading", "lazy");
     image.setAttribute("data-bs-toggle", "modal");
