@@ -13,9 +13,13 @@ function attachHandlers( /** @type {HTMLElement} */ sideBarDOM, /** @type {HTMLE
     }
     const modal = document.getElementById("image-modal");
     modal.addEventListener("show.bs.modal", (e) => {
-        const src = e.relatedTarget.src || e.relatedTarget.dataset.src;
-        document.getElementById("img-to-show").focus();
-        document.getElementById("img-to-show").setAttribute("src", src);
+      const src = e.relatedTarget.src || e.relatedTarget.dataset.src;
+      const photo = photos.filter(x => x.alternate.indexOf(src) >= 0);
+      document.getElementById("img-to-show").focus();
+      document.getElementById("img-to-show").setAttribute("src", photo[0].src);
+    });
+    modal.addEventListener('hide.bs.modal', () => {
+      document.getElementById("img-to-show").setAttribute("src", '');
     });
 }
 
