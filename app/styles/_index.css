@@ -5,17 +5,18 @@
 /* Import components */
 
 @import url("./components/_search.css");
-
-
 @font-face {
-  font-family: "Amstelvar";
-  src:
-    local("Amstelvar"),
-    url("../fonts/amstelvar/Amstelvar-Roman[GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,wdth\,wght\,opsz].ttf") format("truetype");
+    font-family: "Amstelvar";
+    src: local("Amstelvar"), url("../fonts/amstelvar/Amstelvar-Roman[GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,wdth\,wght\,opsz].ttf") format("truetype");
 }
 
 ::selection {
     background: transparent;
+}
+
+a,
+a:visited {
+    color: var(--theme-primary-2);
 }
 
 body {

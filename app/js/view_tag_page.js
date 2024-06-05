@@ -1,10 +1,21 @@
 function setupViewTagPage( /** @type {Document} */ doc, /** @type {Window} */ wndw, /** @type {Array} */ listOfPhotos) {
     const modal = doc.getElementById("image-modal");
     const grid = doc.querySelector(".app-container");
+    const breadcrumbs = doc.getElementById("breadcrumbs");
 
     const params = new URLSearchParams(wndw.location.search);
-    const tagToSearchFor = "t:" + params.get("tag");
+    const tag = params.get("tag");
+    const tagToSearchFor = "t:" + tag;
     const photosWithTag = [];
+
+    // Setting breadcrumbs
+
+    const fragment = document.createRange().createContextualFragment('<ul>' +
+        '<li><a href="index.html">Home</a></li>' +
+        '<li><a href="tags.html">Tags</a></li>' +
+        '</ul>');
+    breadcrumbs.appendChild(fragment)
+
 
     // Find Photos with tagToSearchFor
     for (const photo of listOfPhotos) {
