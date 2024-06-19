@@ -70,6 +70,23 @@ body {
     z-index: 100;
 }
 
+#sidebar .sidebar-opener {
+    display: block;
+    height: 5%;
+    transition: height .2s ease-out;
+}
+
+#sidebar .sidebar-opener .hamburger {
+    height: 100%;
+    width: 100%;
+    
+}
+
+.sideBar-open #sidebar .sidebar-opener {
+    height: 0;
+
+}
+
 .sideBar-open #sidebar {
     background-color: var(--theme-backdrop);
     width: 12vw;
@@ -120,7 +137,6 @@ body {
 #sidebar .sidebar-exit span {
     position: absolute;
     right: 5px;
-    top: -20px;
 }
 
 #sidebar .sidebar-exit span a {
@@ -136,6 +152,7 @@ body {
 
 .sideBar-open #sidebar .sidebar-exit {
     display: block;
+    height: 5%;
 }
 
 .sidebar-app-logo {

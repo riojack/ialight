@@ -2,11 +2,11 @@ function attachHandlers( /** @type {HTMLElement} */ sideBarDOM, /** @type {HTMLE
     const hamburger_anchor = sideBarDOM.querySelector("a.sidebar-opener");
     const sidebar_closer_anchor = sideBarDOM.querySelector("a.sidebar-closer");
 
-    hamburger_anchor.addEventListener("touchend", _sideBarMouseEnter);
-    hamburger_anchor.addEventListener("click", _sideBarMouseEnter);
+    // hamburger_anchor.addEventListener("touchend", _sideBarMouseEnter);
+    // hamburger_anchor.addEventListener("click", _sideBarMouseEnter);
 
-    sidebar_closer_anchor.addEventListener("click", _sidebarClose);
-    sidebar_closer_anchor.addEventListener("touchend", _sidebarClose);
+    // sidebar_closer_anchor.addEventListener("click", _sidebarClose);
+    // sidebar_closer_anchor.addEventListener("touchend", _sidebarClose);
     if (searchBarDOM) {
         const searchBar = searchBarDOM.querySelector("#search-input");
         searchBar.addEventListener("keyup", _handleSearch);

@@ -48,13 +48,13 @@ body {
 }
 
 #breadcrumbs ul li:not(:last-child):after {
-    content: '\25BB';
+    content: '>>';
     color: white;
     text-align: center;
     width: 50px;
     display: inline-block;
-    font-size: 125%;
-    vertical-align: top;
+    font-size: 95%;
+    vertical-align: middle;
 }
 
 #breadcrumbs ul li a {

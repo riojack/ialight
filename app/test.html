@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sidebar</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+      }
+      #animation {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+      }
+      #animation >div {
+        width: 70%;
+        height: 9%;
+        background-color: white;
+        border-radius: 50px;
+        top: 0;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        transition: transform 1s ease-out 0.2s, top 0.8s ease-out 0.2s, opacity 0.2s ease-in;
+        position: absolute;
+        opacity: 1;
+      }
+      #animation >div:nth-child(1) {
+        top: 11.3%;
+      }
+      #animation >div:nth-child(2) {
+        top: 22.6%;
+      }
+      #animation >div:nth-child(3) {
+        top: 33.9%;
+      }
+      #animation:hover >div {
+        /* transform: rotate(90deg);  */
+      }
+      #animation:hover >div:nth-child(1) {
+        top: 39.8%;
+        transform: rotate(45deg); 
+      }
+      #animation:hover >div:nth-child(2) {
+        top: 39.8%;
+        opacity: 0;
+      }
+      #animation:hover >div:nth-child(3) {
+        top: 39.8%;
+        transform: rotate(135deg); 
+      }
+    </style>
+  </head>
+  <body>
+    <div id="animation">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
