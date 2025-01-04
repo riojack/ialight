@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ialight.com data editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script type="application/javascript" src="duhduh.js"></script>
+    <script type="application/javascript" src="../data.js"></script>
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+
+  <body data-bs-theme="dark">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h1>ialight data editor</h1>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col">
+          <label for="ctrlGroupBy" class="form-label">Group By</label>
+          <select class="form-control form-select" id="ctrlGroupBy" aria-label="Group By">
+            <option selected>Loading...</option>
+          </select>
+        </div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div id="editor" class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col"><textarea readonly="readonly" class="form-control export-field" placeholder="JSON Data Export"></textarea></div>
+      </div>
+    </div>
+
+    <div id="edit-modal" class="modal modal-xl" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-3">
+                  <img src="" class="photo-src" style="width: 100%;" />
+                </div>
+                <div class="col">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="export-apply-batch" />
+                    <label class="form-check-label" for="export-apply-batch">Apply to all...</label>
+                  </div>
+                  <div class="input-group">
+                    <textarea id="photo-data" class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="photo-data-save">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="application/javascript">
+      (function () {
+        const doRender = () => {
+          const ctrlGroupBy = document.getElementById('ctrlGroupBy');
+          ctrlGroupBy.innerHTML = '';
+          photos
+            .reduce((a, c) => {
+              Object.keys(c).forEach(p => a.add(p));
+              const sortedList = [...a].sort();
+              return new Set(sortedList);
+            }, new Set())
+            .values()
+            .forEach(p => {
+              const opt = document.createElement('option');
+              opt.textContent = p;
+              ctrlGroupBy.appendChild(opt);
+            });
+        };
+
+        doRender();
+
+        ctrlGroupBy.addEventListener('change', e => {
+          const editorHtml = document.getElementById('editor');
+          const d = new Duhduh(photos, e.target.selectedOptions[0].text);
+          d.render(document, editorHtml);
+
+          document.querySelectorAll('a.photo-link').forEach(editAnchor => {
+            editAnchor.addEventListener('click', evt => {
+              document.querySelector('img.photo-src').setAttribute('src', '');
+              const encoded = editAnchor.getAttribute('data-json');
+              const decoded = decodeURIComponent(encoded);
+              const parsed = JSON.parse(decoded);
+              document.querySelector('img.photo-src').setAttribute('src', parsed.src);
+              document.querySelector('label[for="export-apply-batch"]').textContent = `Apply to all "${parsed.title}" from ${parsed.datetime}`;
+              document.querySelector('textarea#photo-data').value = JSON.stringify(parsed, null, 2);
+              (new bootstrap.Modal('#edit-modal', {})).show();
+              evt.preventDefault();
+              return false;
+            })
+          });
+
+          document.querySelectorAll('.export-me').forEach(expBtn => {
+            expBtn.addEventListener('click', evt => {
+              const exportField = document.querySelector('.export-field');
+              exportField.innerHTML = '';
+
+              const jsonObjects = [];
+              event.target.parentNode.querySelectorAll('a').forEach(anchor => {
+                const encoded = anchor.getAttribute('data-json');
+                const decoded = decodeURIComponent(encoded);
+                jsonObjects.push(JSON.parse(decoded));
+              });
+
+              exportField.innerHTML = JSON.stringify(jsonObjects, null, 2);
+            });
+          });
+
+          document.querySelector('#photo-data-save').addEventListener('click', evt => {
+            const textarea = document.querySelector('textarea#photo-data');
+            const batchApply = document.querySelector('#export-apply-batch').checked;
+            let json = '';
+
+            try {
+              json = JSON.parse(textarea.value);
+            } catch {
+              window.alert('Unable to parse value in textarea');
+              return;
+            }
+
+            photos = photos.map(p => {
+              const { title, datetime, src } = p;
+
+              if (title === json.title) {
+                if (batchApply && datetime === json.datetime) {
+                  const pUpdated = {...p};
+                  pUpdated.tags = json.tags;
+                  return pUpdated;
+                } else if (!batchApply && src === json.src) {
+                  return json;
+                }
+              }
+
+              return p;
+            });
+
+            const exportField = document.querySelector('.export-field');
+            exportField.innerHTML = JSON.stringify(photos, null, 2);
+            // (new bootstrap.Modal('#edit-modal', {})).hide();
+
+            const event = new Event("change", { target: document.getElementById('ctrlGroupBy') });
+            document.getElementById('ctrlGroupBy').dispatchEvent(event);
+          });
+
+        });
+      })();
+    </script>
+  </body>
+
+</html>

@@ -5,10 +5,7 @@ let photos = [
     "datetime": "October 9, 2018",
     "lens": "-",
     "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
+      "portrait"
     ],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/xnKWfG1HQLvH4jPe.jpg",
     "alternate": [
@@ -20,12 +17,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/xYqAsm1perZRltwa.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/xYqAsm1perZRltwa_50pct.jpg"
@@ -36,12 +28,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/wwJgfYNbWQ7KC7RA.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/wwJgfYNbWQ7KC7RA_50pct.jpg"
@@ -52,12 +39,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/vRZ3twR9WQtuhqg3.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/vRZ3twR9WQtuhqg3_50pct.jpg"
@@ -68,12 +50,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/v0rHl9Kg2ThHK9cA.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/v0rHl9Kg2ThHK9cA_50pct.jpg"
@@ -84,12 +61,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/tiO5v2OsOXEhPGZu.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/tiO5v2OsOXEhPGZu_50pct.jpg"
@@ -100,12 +72,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/t92TUYs80zhU9gY4.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/t92TUYs80zhU9gY4_50pct.jpg"
@@ -117,10 +84,7 @@ let photos = [
     "datetime": "October 9, 2018",
     "lens": "-",
     "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
+      "portrait"
     ],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/rcUwH7sTPXNteKkv.jpg",
     "alternate": [
@@ -132,12 +96,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/fhybimMt826ClNAB.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/fhybimMt826ClNAB_50pct.jpg"
@@ -149,10 +108,8 @@ let photos = [
     "datetime": "October 9, 2018",
     "lens": "-",
     "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
+      "camera:Canon EOS80D",
+      "t:nature"
     ],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/ei7lmB06kuPL6GoO.jpg",
     "alternate": [
@@ -164,12 +121,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/dYgKwufrgYiVSPzV.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/dYgKwufrgYiVSPzV_50pct.jpg"
@@ -181,10 +133,7 @@ let photos = [
     "datetime": "October 9, 2018",
     "lens": "-",
     "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
+      "portrait"
     ],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/d9cfJBAWs75Uk8li.jpg",
     "alternate": [
@@ -196,12 +145,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/SQuYzrEc2SOGHWgl.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/SQuYzrEc2SOGHWgl_50pct.jpg"
@@ -212,12 +156,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/QaBVAwEvsfJlD0uN.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/QaBVAwEvsfJlD0uN_50pct.jpg"
@@ -228,12 +167,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/QG1M0TMxe3Wlpfy9.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/QG1M0TMxe3Wlpfy9_50pct.jpg"
@@ -244,12 +178,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/Kc4QfiePiP3oud0D.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/Kc4QfiePiP3oud0D_50pct.jpg"
@@ -260,12 +189,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/J6b7PBaRy7b3GdA6.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/J6b7PBaRy7b3GdA6_50pct.jpg"
@@ -276,12 +200,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 9, 2018",
     "lens": "-",
-    "tags": [
-      "fall",
-      "trees",
-      "yellow",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/GWa1YqkZidClckHk.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/n-east-ia-001/GWa1YqkZidClckHk_50pct.jpg"
@@ -292,11 +211,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "August 6, 2018",
     "lens": "-",
-    "tags": [
-      "insects",
-      "bugs",
-      "plants"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/gGJABxjyTjsXM0dL.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/gGJABxjyTjsXM0dL_50pct.jpg"
@@ -307,11 +222,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "August 6, 2018",
     "lens": "-",
-    "tags": [
-      "insects",
-      "bugs",
-      "plants"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/azdYBpblNdfRMVsi.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/azdYBpblNdfRMVsi_50pct.jpg"
@@ -323,9 +234,8 @@ let photos = [
     "datetime": "August 6, 2018",
     "lens": "-",
     "tags": [
-      "insects",
-      "bugs",
-      "plants"
+      "camera:Canon EOS80D",
+      "t:nature"
     ],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/VtbfPfbixPjuIlAw.jpg",
     "alternate": [
@@ -337,11 +247,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "August 6, 2018",
     "lens": "-",
-    "tags": [
-      "insects",
-      "bugs",
-      "plants"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/ULauHgIjKfBfZIid.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/ULauHgIjKfBfZIid_50pct.jpg"
@@ -352,11 +258,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "August 6, 2018",
     "lens": "-",
-    "tags": [
-      "insects",
-      "bugs",
-      "plants"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/GvrmNbnsYEzsfYfv.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/neal-016/GvrmNbnsYEzsfYfv_50pct.jpg"
@@ -563,10 +465,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "August 30, 2018",
     "lens": "-",
-    "tags": [
-      "plants",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/zSXyBBuHtIZtw0CT.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/zSXyBBuHtIZtw0CT_50pct.jpg"
@@ -577,10 +476,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "August 30, 2018",
     "lens": "-",
-    "tags": [
-      "plants",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/vKPHqNoOHyuxxSWi.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/vKPHqNoOHyuxxSWi_50pct.jpg"
@@ -591,10 +487,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "August 30, 2018",
     "lens": "-",
-    "tags": [
-      "plants",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/knHgDiqSOltesbQh.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/knHgDiqSOltesbQh_50pct.jpg"
@@ -606,8 +499,8 @@ let photos = [
     "datetime": "August 30, 2018",
     "lens": "-",
     "tags": [
-      "plants",
-      "iowa"
+      "camera:Canon EOS80D",
+      "t:nature"
     ],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/dOSGlzviN0mVnZtx.jpg",
     "alternate": [
@@ -620,8 +513,8 @@ let photos = [
     "datetime": "August 30, 2018",
     "lens": "-",
     "tags": [
-      "plants",
-      "iowa"
+      "camera:Canon EOS80D",
+      "t:nature"
     ],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/jester-002/PpZEGCBnuvHYOquu.jpg",
     "alternate": [
@@ -901,9 +794,7 @@ let photos = [
     "datetime": "October 23, 2016",
     "lens": "-",
     "tags": [
-      "trees",
-      "iowa",
-      "trail"
+      "portrait"
     ],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/2560/50v6mQRrTD69.jpg",
     "alternate": [
@@ -915,11 +806,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 23, 2016",
     "lens": "-",
-    "tags": [
-      "trees",
-      "iowa",
-      "trail"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/2560/xpxp6QwwOzOI.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/2560/xpxp6QwwOzOI_50pct.jpg"
@@ -930,11 +817,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 23, 2016",
     "lens": "-",
-    "tags": [
-      "trees",
-      "iowa",
-      "trail"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/2560/q4EgP0UGsDHM.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/2560/q4EgP0UGsDHM_50pct.jpg"
@@ -945,11 +828,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 23, 2016",
     "lens": "-",
-    "tags": [
-      "trees",
-      "iowa",
-      "trail"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/2560/Nve8UxNsC2IA.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/2560/Nve8UxNsC2IA_50pct.jpg"
@@ -960,11 +839,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "October 23, 2016",
     "lens": "-",
-    "tags": [
-      "trees",
-      "iowa",
-      "trail"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/2560/1vBH8Lg3NAW3.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/2560/1vBH8Lg3NAW3_50pct.jpg"
@@ -1654,11 +1529,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/w3JpOzC37476.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/w3JpOzC37476_50pct.jpg"
@@ -1669,11 +1540,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/vHSGVMYq4ptM.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/vHSGVMYq4ptM_50pct.jpg"
@@ -1684,11 +1551,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/tA4jUdBanRnW.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/tA4jUdBanRnW_50pct.jpg"
@@ -1699,11 +1562,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/s8I1nOLJ01c6.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/s8I1nOLJ01c6_50pct.jpg"
@@ -1714,11 +1573,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/qBMEeatu5G50.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/qBMEeatu5G50_50pct.jpg"
@@ -1743,11 +1598,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/noRIEcAJBg7k.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/noRIEcAJBg7k_50pct.jpg"
@@ -1819,11 +1670,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/MuoiXcMxhrfG.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/MuoiXcMxhrfG_50pct.jpg"
@@ -1834,11 +1681,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/In0oW8GUBTnd.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/In0oW8GUBTnd_50pct.jpg"
@@ -1849,11 +1692,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/FQj1oFdg75VD.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/FQj1oFdg75VD_50pct.jpg"
@@ -1877,11 +1716,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/BKlhM51lOVtD.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/BKlhM51lOVtD_50pct.jpg"
@@ -1892,11 +1727,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/9puWv7ELrGqq.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/9puWv7ELrGqq_50pct.jpg"
@@ -1907,11 +1738,7 @@ let photos = [
     "camera": "Canon EOS 80D",
     "datetime": "July 9, 2016",
     "lens": "-",
-    "tags": [
-      "flowers",
-      "summer",
-      "iowa"
-    ],
+    "tags": [],
     "src": "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/8EFbHsEs0fs4.jpg",
     "alternate": [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/capitol-001/8EFbHsEs0fs4_50pct.jpg"
@@ -5375,4 +5202,4 @@ let photos = [
       "https://d3rjsdgb9hzkgz.cloudfront.net/deck/1024/17Ozk7oiUfE4_50pct.jpg"
     ]
   }
-]
+];

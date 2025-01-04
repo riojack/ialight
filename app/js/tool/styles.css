@@ -1,0 +1,31 @@
+html,body {
+  height: 100%;
+  width: 100%;
+}
+
+.accordion-body {
+  font-family: Courier, monospace;
+  max-height: 20vh;
+  overflow-y: scroll;
+}
+
+.export-me {
+  width: 100%;
+  display: block;
+}
+
+textarea {
+  font-family: Courier, monospace;
+}
+
+img, textarea {
+  width: 100%
+}
+
+textarea, textarea#photo-data {
+  height: 100%;
+  min-height: 420px;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: scroll;
+}
