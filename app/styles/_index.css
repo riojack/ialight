@@ -59,7 +59,7 @@ body {
 }
 
 #sidebar {
-    height: 100vh;
+    height: 97vh;
     left: 0;
     overflow: hidden;
     position: absolute;
@@ -68,6 +68,7 @@ body {
     transition: width 0.2s ease-out, background-color 0.2s ease-out;
     width: 3vw;
     z-index: 100;
+    border-bottom-right-radius: 18% 4%;
 }
 
 #sidebar .sidebar-opener {
@@ -79,12 +80,10 @@ body {
 #sidebar .sidebar-opener .hamburger {
     height: 100%;
     width: 100%;
-    
 }
 
 .sideBar-open #sidebar .sidebar-opener {
     height: 0;
-
 }
 
 .sideBar-open #sidebar {

@@ -1,40 +1,36 @@
 function attachHandlers( /** @type {HTMLElement} */ sideBarDOM, /** @type {HTMLElement} */ searchBarDOM) {
-    const hamburger_anchor = sideBarDOM.querySelector("a.sidebar-opener");
-    const sidebar_closer_anchor = sideBarDOM.querySelector("a.sidebar-closer");
+    const hamburger_anchor = sideBarDOM.querySelector("a#the_burger");
+    hamburger_anchor.addEventListener("touchend", _sideBarClick);
+    hamburger_anchor.addEventListener("click", _sideBarClick);
 
-    // hamburger_anchor.addEventListener("touchend", _sideBarMouseEnter);
-    // hamburger_anchor.addEventListener("click", _sideBarMouseEnter);
 
-    // sidebar_closer_anchor.addEventListener("click", _sidebarClose);
-    // sidebar_closer_anchor.addEventListener("touchend", _sidebarClose);
     if (searchBarDOM) {
         const searchBar = searchBarDOM.querySelector("#search-input");
         searchBar.addEventListener("keyup", _handleSearch);
     }
     const modal = document.getElementById("image-modal");
     modal.addEventListener("show.bs.modal", (e) => {
-      const src = e.relatedTarget.src || e.relatedTarget.dataset.src;
-      const photo = photos.filter(x => x.alternate.indexOf(src) >= 0);
-      document.getElementById("img-to-show").focus();
-      document.getElementById("img-to-show").setAttribute("src", photo[0].src);
+        document.body.className = "";
+        const src = e.relatedTarget.src || e.relatedTarget.dataset.src;
+        const photo = photos.filter(x => x.alternate.indexOf(src) >= 0);
+        document.getElementById("img-to-show").focus();
+        document.getElementById("img-to-show").setAttribute("src", photo[0].src);
     });
     modal.addEventListener('hide.bs.modal', () => {
-      document.getElementById("img-to-show").setAttribute("src", '');
+        document.getElementById("img-to-show").setAttribute("src", '');
     });
 }
 
-function _sideBarMouseEnter( /** @type {MouseEvent} */ e) {
-    document.body.className = "sideBar-open";
-    e.preventDefault();
-}
+function _sideBarClick( /** @type {MouseEvent} */ e) {
+    const classes = document.body.className;
+    if (classes.indexOf("sideBar-open") >= 0) {
+        document.body.className = "";
+    } else {
+        document.body.className = "sideBar-open";
+    }
 
-function _sideBarMouseLeave() {
-    document.body.className = "";
-}
-
-function _sidebarClose( /** @type {MouseEvent} */ e) {
-    document.body.className = "";
     e.preventDefault();
+    return false;
 }
 
 function _handleSearch( /** @type {KeyboardEvent} */ event) {

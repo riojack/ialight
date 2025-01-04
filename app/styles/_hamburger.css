@@ -1,44 +1,47 @@
 #burgermation {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto;
-  position: relative;
+    width: 42px;
+    height: 42px;
+    position: relative;
 }
-#burgermation >div {
-  width: 70%;
-  height: 9%;
-  background-color: white;
-  border-radius: 50px;
-  top: 0;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  transition: transform 1s ease-out 0.2s, top 0.8s ease-out 0.2s, opacity 0.2s ease-in;
-  position: absolute;
-  opacity: 1;
+
+#burgermation>div {
+    width: 70%;
+    height: 8%;
+    background-color: var(--theme-primary-2);
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.25s ease-out 0.1s, top 0.4s ease-out 0.1s, opacity 0.05s ease-in;
+    position: absolute;
+    opacity: 1;
 }
-#burgermation >div:nth-child(1) {
-  top: 11.3%;
+
+#burgermation>div:nth-child(1) {
+    top: 11.3%;
 }
-#burgermation >div:nth-child(2) {
-  top: 22.6%;
+
+#burgermation>div:nth-child(2) {
+    top: 22.6%;
 }
-#burgermation >div:nth-child(3) {
-  top: 33.9%;
+
+#burgermation>div:nth-child(3) {
+    top: 33.9%;
 }
-#burgermation:hover >div {
-  /* transform: rotate(90deg);  */
+
+body.sideBar-open #burgermation>div:nth-child(1) {
+    top: 39.8%;
+    transform: rotate(45deg);
 }
-#burgermation:hover >div:nth-child(1) {
-  top: 39.8%;
-  transform: rotate(45deg); 
+
+body.sideBar-open #burgermation>div:nth-child(2) {
+    top: 39.8%;
+    opacity: 0;
 }
-#burgermation:hover >div:nth-child(2) {
-  top: 39.8%;
-  opacity: 0;
-}
-#burgermation:hover >div:nth-child(3) {
-  top: 39.8%;
-  transform: rotate(135deg); 
+
+body.sideBar-open #burgermation>div:nth-child(3) {
+    top: 39.8%;
+    transform: rotate(135deg);
 }
